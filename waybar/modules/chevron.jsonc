@@ -1,0 +1,7 @@
+// custom/chevron — handle of the "extras" drawer (hover to reveal)
+{
+    "custom/chevron": {
+        "format": "󰅁",
+        "tooltip": false
+    }
+}

@@ -1,0 +1,9 @@
+// cpu — usage %, click opens btop in a floating terminal
+{
+    "cpu": {
+        "format": "󰻠  {usage}%",
+        "interval": 3,
+        "tooltip-format": "CPU {usage}% · load {load}",
+        "on-click": "kitty --class floating-tui -e btop"
+    }
+}

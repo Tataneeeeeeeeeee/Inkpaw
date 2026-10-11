@@ -1,0 +1,14 @@
+/* wlr/taskbar — app icons, active one with an accent underline */
+#taskbar { padding: 0 2px; }
+#taskbar:hover { background: transparent; }
+#taskbar button {
+    padding: 0 6px;
+    margin: 0 1px;
+    border-radius: 8px;
+    background: transparent;
+    border-bottom: 2px solid transparent;
+    transition: background-color 200ms ease-out, border-color 200ms ease-out;
+}
+#taskbar button.active { border-bottom: 2px solid @a2; background-color: alpha(@a2, 0.14); }
+#taskbar button:hover  { background-color: alpha(@on_surface, 0.08); }
+#taskbar.empty { padding: 0; margin: 0; }

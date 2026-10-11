@@ -1,0 +1,17 @@
+/* hyprland/workspaces — small dots, the active one stretches into a pill */
+#workspaces { padding: 0 2px; }
+#workspaces:hover { background: transparent; }
+#workspaces button {
+    min-width: 7px;
+    min-height: 7px;
+    padding: 0;
+    margin: 9px 3px;
+    border-radius: 999px;
+    background-color: alpha(@on_surface, 0.30);
+    transition: min-width 320ms cubic-bezier(0.22, 1, 0.36, 1), background-color 250ms ease-out;
+}
+#workspaces button label { font-size: 1px; color: transparent; }
+#workspaces button.empty  { background-color: alpha(@on_surface, 0.14); }
+#workspaces button.active { min-width: 22px; background-image: linear-gradient(90deg, @a1, @a3); }
+#workspaces button.urgent { background-color: @a4; }
+#workspaces button:hover:not(.active) { background-color: alpha(@a1, 0.6); }

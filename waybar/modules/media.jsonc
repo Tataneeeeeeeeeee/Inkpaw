@@ -1,0 +1,15 @@
+// mpris — now playing; click = media panel, middle = play/pause, scroll = next/previous
+{
+    "mpris": {
+        "format": "{player_icon}  {title}",
+        "format-paused": "{status_icon}  {title}",
+        "title-len": 28,
+        "player-icons": { "default": "󰎆", "spotify": "󰓇", "firefox": "󰈹" },
+        "status-icons": { "paused": "󰏤" },
+        "on-click": "$XDG_CONFIG_HOME/hypr/scripts/quickpanel.sh media",
+        "on-click-middle": "playerctl play-pause",
+        "on-scroll-up": "playerctl next",
+        "on-scroll-down": "playerctl previous",
+        "tooltip-format": "{artist} — {title}"
+    }
+}

@@ -1,0 +1,30 @@
+# =============================================================================
+#  waybar/catalog.tsv — every module the bar can show
+# =============================================================================
+#  name <TAB> waybar module id <TAB> label (shown in the settings menu)
+#  Definitions live in modules/<file>.jsonc. Capsule contents are set with
+#  BAR_SESSION / BAR_TIME / BAR_STATUS / BAR_SYSTEM / BAR_EXTRAS (settings.conf)
+#  using the names of the first column.
+# =============================================================================
+launcher	custom/launcher	Launcher button
+workspaces	hyprland/workspaces	Workspaces
+taskbar	wlr/taskbar	Open windows
+window	hyprland/window	Focused window title
+clock	clock	Clock / date
+media	mpris	Media player
+extras	group/extras	Drawer (hidden extras, hover the chevron)
+tray	tray	System tray
+caffeine	idle_inhibitor	Caffeine (idle inhibitor)
+wallpaper	custom/wallpaper	Wallpaper button
+brightness	backlight	Brightness
+keyboard	hyprland/language	Keyboard layout
+cpu	cpu	CPU usage
+memory	memory	Memory usage
+sound	pulseaudio	Sound
+network	network	Network / Wi-Fi
+bluetooth	bluetooth	Bluetooth
+battery	battery	Battery
+ai	custom/ai	AI assistant (chat panel)
+notifications	custom/notifications	Notifications
+settings	custom/settings	Settings button
+power	custom/power	Power button

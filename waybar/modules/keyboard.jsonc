@@ -1,0 +1,7 @@
+// hyprland/language — current keyboard layout (click: next layout)
+{
+    "hyprland/language": {
+        "format": "󰌌  {short}",
+        "on-click": "hyprctl switchxkblayout all next"
+    }
+}

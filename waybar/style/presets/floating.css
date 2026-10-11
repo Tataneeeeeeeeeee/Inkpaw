@@ -1,0 +1,8 @@
+/* BAR_STYLE="floating" — one rounded translucent bar, capsules flat inside it */
+window#waybar > box {
+    border: 1px solid alpha(@a1, 0.22);
+    box-shadow: 0 4px 14px alpha(black, 0.30);
+    padding: 0 6px;
+}
+#session, #time, #status, #system { background: transparent; margin: 2px 2px; }
+#time { border-left: 1px solid alpha(@on_surface, 0.10); border-right: 1px solid alpha(@on_surface, 0.10); }

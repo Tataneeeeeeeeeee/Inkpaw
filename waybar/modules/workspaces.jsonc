@@ -1,0 +1,12 @@
+// hyprland/workspaces — dots; the active one stretches into a pill (CSS)
+{
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": { "default": "", "active": "", "urgent": "" },
+        "on-click": "activate",
+        "on-scroll-up": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e-1\" })'",
+        "on-scroll-down": "hyprctl dispatch 'hl.dsp.focus({ workspace = \"e+1\" })'",
+        "persistent-workspaces": { "*": 5 },
+        "tooltip": false
+    }
+}

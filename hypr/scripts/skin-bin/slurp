@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+# =============================================================================
+#  scripts/skin-bin/slurp — skinned slurp (selection colors of the UI skin)
+# =============================================================================
+#  hyprshot calls `slurp` with fixed arguments, so screenshot.sh puts this
+#  folder first in PATH when the active skin has colors for it, and exports
+#  SLURP_SKIN_ARGS: one argument per line (a font name may hold spaces), e.g.
+#  "-b\n#2a24208c\n-c\n#2a2420ff\n-s\n#00000000\n-w\n3\n-F\nCourier Prime".
+#  This shim drops itself from PATH and runs the real slurp with those
+#  arguments followed by the caller's own (the caller's win if repeated).
+# =============================================================================
+# Drop this folder from PATH, whatever its spelling (the session root is a
+# tree of symlinks), else exec would call the shim again. SKIN_SLURP_SHIM
+# guards against a loop anyway.
+[ -n "${SKIN_SLURP_SHIM:-}" ] && { echo "skin-bin/slurp: real slurp not found" >&2; exit 1; }
+export SKIN_SLURP_SHIM=1
+here="$(dirname "$(readlink -f "$0")")"
+new=""
+IFS=: read -r -a dirs <<<"$PATH"
+for d in "${dirs[@]}"; do
+    [ "$(readlink -f "$d" 2>/dev/null)" = "$here" ] && continue
+    new="${new:+$new:}$d"
+done
+export PATH="$new"
+skin_args=()
+[ -n "${SLURP_SKIN_ARGS:-}" ] && mapfile -t skin_args <<<"$SLURP_SKIN_ARGS"
+exec slurp "${skin_args[@]}" "$@"

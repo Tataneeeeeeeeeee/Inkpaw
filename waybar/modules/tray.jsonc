@@ -1,0 +1,7 @@
+// tray — system tray (status notifier items)
+{
+    "tray": {
+        "icon-size": 18,
+        "spacing": 8
+    }
+}

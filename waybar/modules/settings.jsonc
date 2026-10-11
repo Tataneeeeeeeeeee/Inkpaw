@@ -1,0 +1,10 @@
+// custom/settings — settings menu (SUPER+CTRL+S)
+{
+    "custom/settings": {
+        "format": "󰒓",
+        "tooltip-format": "Settings",
+        "on-click": "$XDG_CONFIG_HOME/hypr/scripts/settings-ui.sh",
+        "on-click-middle": "$XDG_CONFIG_HOME/hypr/scripts/menus/settings.sh",
+        "on-click-right": "$XDG_CONFIG_HOME/hypr/scripts/menus/keybindings.sh"
+    }
+}

@@ -1,0 +1,6 @@
+/* custom/notifications — accent when unread, faded in DND */
+#custom-notifications              { color: @a1; }
+#custom-notifications.notification { color: @a4; }
+#custom-notifications.dnd-none,
+#custom-notifications.dnd-notification { color: alpha(@on_surface, 0.35); }
+#custom-notifications:hover { background-color: alpha(@a1, 0.16); }

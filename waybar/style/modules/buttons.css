@@ -1,0 +1,9 @@
+/* custom/settings, custom/power */
+#custom-settings, #custom-power { padding: 0 9px; font-size: 13px; }
+#custom-settings { color: @a3; }
+#custom-power { color: @a4; }
+#custom-power:hover { color: @surface; background-color: @a4; }
+
+/* custom/ai — AI chat button */
+#custom-ai { color: @a2; font-size: 14px; }
+#custom-ai:hover { color: @surface; background-color: @a2; }

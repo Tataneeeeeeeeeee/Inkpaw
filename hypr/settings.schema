@@ -1,0 +1,151 @@
+# =============================================================================
+#  hypr/settings.schema — what the settings menu shows (SUPER+CTRL+S)
+# =============================================================================
+#  One option per line, fields separated by " | ":
+#
+#    section | key | type | choices | label | apply
+#
+#  section  "Page/Group": the page (sidebar entry of the settings app, entry of
+#           the rofi menu) and the group of rows inside that page.
+#  type    bool    on / off
+#          choice  one of the comma-separated choices
+#          number  free number, choices = suggestions
+#          text    free text, choices = suggestions (";" separated)
+#          modules ordered list of bar modules (waybar/catalog.tsv)
+#          capsules ordered list of capsules (session, time, status, system)
+#          app     an application command: drop-down of the INSTALLED choices
+#          secret  API key / password: stored apart (state dir, mode 600), never displayed
+#          action  runs the command in "key" (no value)
+#  apply   what happens after a change:
+#          hypr = reload Hyprland · bar = rebuild + restart the bar
+#          apps = hypr/scripts/apps-config.sh KEY (kitty file, xdg defaults…)
+#          theme = re-render the theme · mode / scheme = theme.sh mode|scheme
+#          skin = hyprtheme/skin.sh apply VALUE (fonts, app look, bar at once)
+#          pet = restart the desktop cat (hypr/scripts/deskpet.sh)
+#          none = nothing (read at next launch)
+#
+#  Values are saved in ~/.local/state/inkpaw/toggles.conf and override
+#  hypr/settings.conf. "Reset section" removes them again.
+#  Add a line here to expose any other KEY from settings.conf in the menu.
+# =============================================================================
+
+# --- Bar ----------------------------------------------------------------------
+Bar/Layout | BAR_POSITION | choice | top,bottom | Position | bar
+Bar/Layout | BAR_LAYOUT | choice | center,split,left,right,custom | Placement of the capsules | bar
+Bar/Layout | BAR_STYLE | choice | capsules,floating,solid,minimal,hyde,encre | Style | bar
+Bar/Layout | BAR_SINGLE_CAPSULE | bool |  | Everything in one capsule | bar
+Bar/Contents | BAR_SESSION | modules |  | Capsule 1 · session | bar
+Bar/Contents | BAR_TIME | modules |  | Capsule 2 · time | bar
+Bar/Contents | BAR_STATUS | modules |  | Capsule 3 · status | bar
+Bar/Contents | BAR_SYSTEM | modules |  | Capsule 4 · system | bar
+Bar/Contents | BAR_EXTRAS | modules |  | Hover drawer contents | bar
+Bar/Custom placement | BAR_LEFT | capsules |  | Custom placement · left | bar
+Bar/Custom placement | BAR_CENTER | capsules |  | Custom placement · center | bar
+Bar/Custom placement | BAR_RIGHT | capsules |  | Custom placement · right | bar
+Bar/Modules | BAR_WORKSPACES_STYLE | choice | dots,numbers | Workspaces look | bar
+Bar/Modules | BAR_WORKSPACES_COUNT | number | 3,4,5,6,8,10 | Workspaces always shown | bar
+Bar/Modules | BAR_CLOCK_FORMAT | text | %a %d %b   %H:%M;%H:%M;%H:%M:%S;%A %d %B · %H:%M;%d/%m  %H:%M | Clock format | bar
+Bar/Modules | BAR_SHOW_PERCENT | bool |  | Numbers next to icons | bar
+Bar/Modules | BAR_COLORED_ICONS | bool |  | Colored icons | bar
+Bar/Sizes | BAR_FONT_SIZE | number | 10,11,12,13,14 | Font size | bar
+Bar/Sizes | BAR_MODULE_PADDING | number | 6,8,10,13,16,20 | Width: space around each module | bar
+Bar/Sizes | BAR_HEIGHT | number | 0,30,34,38,42 | Height (0 = auto) | bar
+Bar/Sizes | BAR_MARGIN | number | 0,4,6,8,12 | Distance from the screen edge | bar
+Bar/Sizes | BAR_RADIUS | number | 0,6,9,12,16 | Corner radius | bar
+Bar/Sizes | BAR_OPACITY | number | 0.5,0.65,0.75,0.82,0.9,1.0 | Background opacity | bar
+Bar/Layout | BAR_OUTPUTS | text | *;eDP-2;HDMI-A-1;eDP-2 HDMI-A-1 | Monitors showing the bar | bar
+Bar/Layout | $SCRIPTS/waybar.sh toggle | action |  | Hide / show the bar now | none
+
+# --- Applications ------------------------------------------------------------
+#  type "app": drop-down of the suggestions that are INSTALLED (+ your value).
+Applications/Default applications | TERMINAL | app | kitty,foot,alacritty,ghostty,wezterm,konsole | Terminal | none
+Applications/Default applications | BROWSER | app | firefox,zen-browser,brave,chromium,google-chrome-stable,vivaldi | Web browser (also the system default) | apps
+Applications/Default applications | FILEMANAGER | app | nautilus --new-window,thunar,dolphin,nemo,pcmanfm,kitty -e yazi | File manager (also opens folders) | apps
+Applications/Default applications | EDITOR_GUI | app | gnome-text-editor,code,zeditor,kate,gedit,mousepad,kitty -e nvim | Text editor | none
+Applications/Default applications | CALCULATOR | app | gnome-calculator,qalculate-gtk,kcalc,galculator | Calculator | none
+Applications/Default applications | AUDIO_MIXER | app | pavucontrol,pwvucontrol,helvum | Audio mixer | none
+Applications/Default applications | BLUETOOTH_MANAGER | app | blueman-manager,blueberry,overskride | Bluetooth manager | none
+Applications/Personal shortcuts | APP_CHAT | app | discord,vesktop,webcord,telegram-desktop,signal-desktop | Chat (SUPER+D) | hypr
+Applications/Personal shortcuts | APP_MUSIC | app | spotify-launcher,spotify,rhythmbox,strawberry,amberol | Music (SUPER+P) | hypr
+Applications/Personal shortcuts | APP_TEAMS | app | teams-for-linux,slack,zoom | Work chat (SUPER+O) | hypr
+Applications/Terminal (kitty) | KITTY_FONT | text | JetBrains Mono Nerd Font;CaskaydiaCove Nerd Font;Fira Code;monospace | Font | apps
+Applications/Terminal (kitty) | KITTY_FONT_SIZE | number | 9,10,11,12,13,14 | Font size | apps
+Applications/Terminal (kitty) | KITTY_OPACITY | number | 0.7,0.8,0.85,0.9,0.95,1.0 | Background opacity | apps
+Applications/Terminal (kitty) | KITTY_PADDING | number | 0,4,8,12,16,22 | Inner padding | apps
+Applications/Terminal (kitty) | KITTY_CURSOR | choice | beam,block,underline | Cursor shape | apps
+Applications/File manager | FILES_SHOW_HIDDEN | bool |  | Show hidden files | apps
+Applications/File manager | FILES_VIEW | choice | grid,list | Default view (Nautilus) | apps
+
+# --- AI assistant -------------------------------------------------------------
+#  type "secret": stored in ~/.local/state/inkpaw/secrets.conf (mode 600),
+#  never shown back, never in settings.conf / toggles.conf.
+AI assistant/Model | AI_PROVIDER | choice | claude,openai,ollama,openrouter,custom | Provider | none
+AI assistant/Model | AI_MODEL | text | claude-opus-5-5;claude-sonnet-5-5;claude-haiku-5-5 | Model | none
+AI assistant/Model | AI_EFFORT | choice | low,medium,high,xhigh,max | Thinking effort (Claude) | none
+AI assistant/Model | AI_BASE_URL | text | https://api.openai.com/v1;http://localhost:11434/v1;https://openrouter.ai/api/v1 | Endpoint URL (OpenAI-compatible) | none
+AI assistant/API keys | ANTHROPIC_API_KEY | secret |  | Claude (Anthropic) API key | none
+AI assistant/API keys | OPENAI_API_KEY | secret |  | OpenAI API key | none
+AI assistant/API keys | OPENROUTER_API_KEY | secret |  | OpenRouter API key | none
+AI assistant/API keys | AI_CUSTOM_API_KEY | secret |  | Custom endpoint API key | none
+AI assistant/Panel | AI_SIDE | choice | right,left | Side of the screen | none
+AI assistant/Panel | AI_WIDTH | number | 360,420,480,560,640 | Width | none
+AI assistant/Panel | AI_SYSTEM_PROMPT | text | Answer in French.;Answer concisely, like a senior Linux engineer.;You are a friendly assistant. | Instructions for the assistant | none
+AI assistant/Panel | $SCRIPTS/aichat.sh | action |  | Open the chat panel | none
+
+# --- Appearance ---------------------------------------------------------------
+Appearance/Wallpaper & theme | $THEME_DIR/wallpaper-picker.sh | action |  | Wallpaper selector | none
+Appearance/Wallpaper & theme | $THEME_DIR/theme.sh random | action |  | Random wallpaper | none
+Appearance/Wallpaper & theme | $THEME_DIR/static-picker.sh | action |  | Static themes | none
+Appearance/Wallpaper & theme | UI_SKIN | choice | default,encre | Interface style: fonts, app look and top bar (encre = ink and parchment, cats) | skin
+Appearance/Desktop cat | DESKTOP_PET | bool |  | Cat peeking from the bottom of the screen | pet
+Appearance/Desktop cat | DESKTOP_PET_CAT | choice | moumoute,gribouille,biscotte,pate,clafoutis,croquette | Which cat | pet
+Appearance/Wallpaper & theme | THEME_MODE | choice | dark,light | Light / dark mode | mode
+Appearance/Colors | ACCENT_STYLE | choice | wallbash,rainbow | Accent colors | theme
+Appearance/Colors | MATUGEN_SCHEME | choice | scheme-tonal-spot,scheme-vibrant,scheme-expressive,scheme-content,scheme-fidelity,scheme-fruit-salad,scheme-rainbow,scheme-neutral,scheme-monochrome | Palette style (wallpapers) | scheme
+Appearance/Panels & menus | FONT_FAMILY | text | Google Sans Flex;Rubik;Cantarell;Noto Sans;CaskaydiaCove Nerd Font | UI font | theme
+Appearance/Panels & menus | DISPLAY_FONT | text | Caveat Brush;Shantell Sans;Google Sans Flex | Title font (empty = UI font) | theme
+Appearance/Panels & menus | FONT_SIZE | number | 11,12,13,14 | UI font size (menus, panels) | theme
+Appearance/Panels & menus | UI_RADIUS | number | 6,10,12,16,20 | Corner radius of panels | theme
+Appearance/Panels & menus | UI_OPACITY | number | 0.6,0.72,0.8,0.9,1.0 | Opacity of panels | theme
+
+# --- Windows ------------------------------------------------------------------
+Windows/Spacing & borders | GAPS_IN | number | 0,3,6,10,15 | Gaps between windows | hypr
+Windows/Spacing & borders | GAPS_OUT | number | 0,6,12,20,30 | Gaps around the screen | hypr
+Windows/Spacing & borders | BORDER_SIZE | number | 0,1,2,3,4 | Border size | hypr
+Windows/Spacing & borders | BORDER_STYLE | choice | gradient,ink | Focused border color | hypr
+Windows/Spacing & borders | BORDER_ANIMATE | bool |  | Rotating gradient border | hypr
+Windows/Spacing & borders | ROUNDING | number | 0,6,10,14,20 | Window corner radius | hypr
+Windows/Transparency & effects | ACTIVE_OPACITY | number | 0.8,0.88,0.92,1.0 | Opacity of the focused window | hypr
+Windows/Transparency & effects | INACTIVE_OPACITY | number | 0.7,0.8,0.84,0.9,1.0 | Opacity of other windows | hypr
+Windows/Transparency & effects | BLUR | bool |  | Blur | hypr
+Windows/Transparency & effects | SHADOW | bool |  | Shadows | hypr
+Windows/Transparency & effects | SHADOW_STYLE | choice | soft,hard | Shadow style (hard = ink offset) | hypr
+Windows/Animations & layout | ANIMATIONS | bool |  | Animations | hypr
+Windows/Animations & layout | ANIMATION_PRESET | choice | smooth,md3,fast,none | Animation preset | hypr
+Windows/Animations & layout | LAYOUT | choice | dwindle,master | Tiling layout | hypr
+Windows/Animations & layout | GAMEMODE | bool |  | Game mode (no effects) | hypr
+
+# --- Displays & input ------------------------------------------------------------
+Displays/Screens | $SCRIPTS/menus/monitors.sh | action |  | Monitor profiles | none
+Displays/Screens | MONITOR_EXTERNAL_SIDE | choice | left,right,above,below | External screen position | hypr
+Displays/Screens | nwg-displays | action |  | Monitor layout editor | none
+Displays/Screens | $SCRIPTS/quickpanel.sh brightness | action |  | Brightness & night light | none
+Displays/Keyboard & mouse | KB_LAYOUT | text | fr;us;fr,us;de;es | Keyboard layout | hypr
+Displays/Keyboard & mouse | NATURAL_SCROLL | bool |  | Natural scrolling (touchpad) | hypr
+Displays/Keyboard & mouse | MOUSE_SENSITIVITY | number | -0.5,-0.25,0,0.25,0.5 | Mouse sensitivity | hypr
+
+# --- System ---------------------------------------------------------------------
+System/General | LAUNCHER | choice | spotlight,walker | Search launcher (SUPER+SPACE) | none
+System/General | SETTINGS_UI | choice | app,rofi | Settings window or rofi menu | none
+System/Tools | $SCRIPTS/welcome.sh | action |  | Welcome window (first steps) | none
+System/Tools | $SCRIPTS/quickpanel.sh wifi | action |  | Wi-Fi | none
+System/Tools | $SCRIPTS/quickpanel.sh bluetooth | action |  | Bluetooth | none
+System/Tools | $SCRIPTS/quickpanel.sh sound | action |  | Sound | none
+System/Tools | $SCRIPTS/quickpanel.sh battery | action |  | Battery & power mode | none
+System/Battery alerts | BATTERY_ALERT_LEVELS | text | 20 10 5;15 5;30 15 5 | Laptop battery alert levels (%) | none
+System/Battery alerts | DEVICE_ALERT_LEVEL | number | 5,10,15,20,30 | Mouse / headset alert level (%) | none
+System/Tools | $SCRIPTS/quickpanel.sh notifications | action |  | Notifications | none
+System/Tools | $SCRIPTS/menus/keybindings.sh | action |  | Keybindings cheat sheet | none
+System/Tools | $SCRIPTS/menus/edit-config.sh | action |  | Edit config files | none
+System/Tools | hyprctl reload | action |  | Reload Hyprland | none
+System/Tools | $SCRIPTS/menus/power.sh | action |  | Power menu | none

@@ -1,0 +1,11 @@
+// backlight — brightness: click = brightness panel, scroll = adjust
+{
+    "backlight": {
+        "format": "{icon}",
+        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "tooltip-format": "Brightness {percent}%",
+        "on-click": "$XDG_CONFIG_HOME/hypr/scripts/quickpanel.sh brightness",
+        "on-scroll-up": "$XDG_CONFIG_HOME/hypr/scripts/osd.sh brightness up",
+        "on-scroll-down": "$XDG_CONFIG_HOME/hypr/scripts/osd.sh brightness down"
+    }
+}

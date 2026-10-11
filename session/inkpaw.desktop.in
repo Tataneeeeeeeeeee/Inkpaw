@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Hyprland — Inkpaw
+Comment=Hyprland avec Inkpaw (@PROJECT@)
+Exec=@PROJECT@/session/start.sh
+Type=Application
+DesktopNames=Hyprland
+Keywords=tiling;wayland;compositor;

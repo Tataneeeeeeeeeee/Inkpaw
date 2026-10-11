@@ -1,0 +1,22 @@
+/* pulseaudio, network, bluetooth, battery — tone-on-tone accents */
+#pulseaudio, #network, #bluetooth, #battery { padding: 0 8px; font-weight: 600; }
+#pulseaudio { color: @a1; }
+#network    { color: @a3; }
+#bluetooth  { color: @a2; }
+#battery    { color: @a5; }
+
+#pulseaudio.muted,
+#network.disconnected, #network.disabled,
+#bluetooth.disabled, #bluetooth.off { color: alpha(@on_surface, 0.35); }
+
+#battery.charging, #battery.plugged { color: @a6; }
+#battery.warning:not(.charging)  { color: @a4; }
+#battery.critical:not(.charging) { color: @surface; background-color: @error; }
+
+/* optional modules (catalog: cpu, memory, media, keyboard) */
+#cpu, #memory, #mpris, #language { padding: 0 8px; font-weight: 600; }
+#cpu      { color: @a4; }
+#memory   { color: @a5; }
+#mpris    { color: @a2; }
+#mpris.paused { color: alpha(@on_surface, 0.5); }
+#language { color: @a3; }

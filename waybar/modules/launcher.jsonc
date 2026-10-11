@@ -1,0 +1,9 @@
+// custom/launcher — opens the Spotlight launcher (Walker)
+{
+    "custom/launcher": {
+        "format": "󰀻",
+        "tooltip-format": "Search (SUPER+SPACE)",
+        "on-click": "$XDG_CONFIG_HOME/hypr/scripts/launcher.sh",
+        "on-click-right": "$XDG_CONFIG_HOME/hypr/scripts/launcher.sh files"
+    }
+}

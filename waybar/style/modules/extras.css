@@ -1,0 +1,9 @@
+/* group/extras — drawer: chevron + tray, caffeine, wallpaper, brightness */
+#custom-chevron { color: @a6; padding: 0 8px; transition: color 200ms ease-out; }
+#extras:hover #custom-chevron { color: @a1; }
+#tray, #idle_inhibitor, #custom-wallpaper, #backlight { padding: 0 8px; }
+#tray > .needs-attention { color: @error; }
+#idle_inhibitor            { color: alpha(@on_surface, 0.6); }
+#idle_inhibitor.activated  { color: @a5; }
+#custom-wallpaper          { color: @a3; }
+#backlight                 { color: @a5; }

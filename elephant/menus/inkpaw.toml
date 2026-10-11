@@ -1,0 +1,58 @@
+# =============================================================================
+#  elephant/menus/inkpaw.toml — desktop actions searchable in Walker
+# =============================================================================
+#  Type e.g. "wallpaper", "lock", "monitor"… in Spotlight to run these.
+#  Each [[entries]] = one action. `actions.default` is the command.
+# =============================================================================
+name = "inkpaw"
+name_pretty = "Desktop"
+icon = "preferences-desktop"
+global_search = true
+
+[[entries]]
+text = "Wallpaper selector"
+keywords = ["wallpaper", "background", "theme"]
+icon = "preferences-desktop-wallpaper"
+actions = { "default" = "${XDG_CONFIG_HOME:-$HOME/.config}/hyprtheme/wallpaper-picker.sh" }
+
+[[entries]]
+text = "Static themes"
+keywords = ["theme", "colors", "palette"]
+icon = "preferences-desktop-theme"
+actions = { "default" = "${XDG_CONFIG_HOME:-$HOME/.config}/hyprtheme/static-picker.sh" }
+
+[[entries]]
+text = "Toggle light / dark mode"
+keywords = ["dark", "light", "mode"]
+icon = "weather-clear-night"
+actions = { "default" = "${XDG_CONFIG_HOME:-$HOME/.config}/hyprtheme/theme.sh mode toggle" }
+
+[[entries]]
+text = "Settings menu"
+keywords = ["settings", "preferences", "config"]
+icon = "preferences-system"
+actions = { "default" = "${XDG_CONFIG_HOME:-$HOME/.config}/hypr/scripts/settings-ui.sh" }
+
+[[entries]]
+text = "Keybindings cheat sheet"
+keywords = ["keys", "shortcuts", "bindings"]
+icon = "input-keyboard"
+actions = { "default" = "${XDG_CONFIG_HOME:-$HOME/.config}/hypr/scripts/menus/keybindings.sh" }
+
+[[entries]]
+text = "Monitor profiles"
+keywords = ["monitor", "display", "screen"]
+icon = "video-display"
+actions = { "default" = "${XDG_CONFIG_HOME:-$HOME/.config}/hypr/scripts/menus/monitors.sh" }
+
+[[entries]]
+text = "Lock screen"
+keywords = ["lock"]
+icon = "system-lock-screen"
+actions = { "default" = "${XDG_CONFIG_HOME:-$HOME/.config}/hypr/scripts/lock.sh" }
+
+[[entries]]
+text = "Power menu"
+keywords = ["power", "shutdown", "reboot", "logout", "suspend"]
+icon = "system-shutdown"
+actions = { "default" = "${XDG_CONFIG_HOME:-$HOME/.config}/hypr/scripts/menus/power.sh" }

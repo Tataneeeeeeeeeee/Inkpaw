@@ -1,0 +1,9 @@
+// custom/power — power menu (wlogout); right click = lock
+{
+    "custom/power": {
+        "format": "󰐥",
+        "tooltip-format": "Power menu",
+        "on-click": "$XDG_CONFIG_HOME/hypr/scripts/menus/power.sh",
+        "on-click-right": "$XDG_CONFIG_HOME/hypr/scripts/lock.sh"
+    }
+}

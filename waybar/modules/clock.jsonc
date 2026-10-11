@@ -1,0 +1,13 @@
+// clock — "jeu. 08 oct.  14:32" (system locale); click = calendar panel, right click = full date
+{
+    "clock": {
+        "format": "{:L%a %d %b   %H:%M}",
+        "format-alt": "{:L%A %d %B %Y   %H:%M:%S}",
+        "interval": 1,
+        "tooltip": false,
+        "on-click": "$XDG_CONFIG_HOME/hypr/scripts/quickpanel.sh calendar",
+        "actions": {
+            "on-click-right": "mode"
+        }
+    }
+}

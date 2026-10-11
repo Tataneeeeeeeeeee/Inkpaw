@@ -1,0 +1,11 @@
+// wlr/taskbar — open windows; left click focuses, middle click closes
+{
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 15,
+        "tooltip-format": "{title}",
+        "on-click": "activate",
+        "on-click-middle": "close",
+        "app_ids-mapping": {}
+    }
+}

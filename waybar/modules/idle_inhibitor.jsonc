@@ -1,0 +1,9 @@
+// idle_inhibitor — "caffeine": while active, hypridle never dims / locks / suspends
+{
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": { "activated": "󰅶", "deactivated": "󰾪" },
+        "tooltip-format-activated": "Caffeine ON — idle disabled",
+        "tooltip-format-deactivated": "Caffeine OFF"
+    }
+}

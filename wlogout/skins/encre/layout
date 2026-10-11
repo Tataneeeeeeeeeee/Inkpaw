@@ -1,0 +1,5 @@
+{ "label": "lock",     "action": "sh -c \"${XDG_CONFIG_HOME:-$HOME/.config}/hypr/scripts/lock.sh\"", "text": "󰌾  Verrouiller  ·  L",  "keybind": "l" }
+{ "label": "logout",   "action": "hyprctl dispatch 'hl.dsp.exit()'",                    "text": "󰍃  Déconnexion  ·  E",  "keybind": "e" }
+{ "label": "suspend",  "action": "systemctl suspend",                                    "text": "󰒲  Veille  ·  U",       "keybind": "u" }
+{ "label": "reboot",   "action": "systemctl reboot",                                     "text": "󰜉  Redémarrer  ·  R",   "keybind": "r" }
+{ "label": "shutdown", "action": "systemctl poweroff",                                   "text": "󰐥  Éteindre  ·  S",     "keybind": "s" }

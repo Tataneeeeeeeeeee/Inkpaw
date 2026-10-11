@@ -1,0 +1,34 @@
+{
+  "_comment": "swaync config OVERLAY of the 'encre' skin (hyprtheme/skins/encre). Merged over ../config.json by hypr/scripts/notifications.sh (jq '.[0] * .[1]': objects merge, arrays such as 'widgets' are replaced) when UI_SKIN=encre. Only the layout of the mockup Mew-Panel: quick toggles and sliders on top, the 'Notifications' title and its cards below, French labels, 40 px card icons (the cat face size). Geometry stays in config.json.",
+  "notification-icon-size": 40,
+  "widgets": [
+    "buttons-grid",
+    "volume",
+    "backlight",
+    "dnd",
+    "mpris",
+    "title",
+    "notifications"
+  ],
+  "widget-config": {
+    "title": {
+      "text": "Notifications",
+      "clear-all-button": true,
+      "button-text": "Tout effacer"
+    },
+    "dnd": {
+      "text": "Ne pas déranger"
+    },
+    "volume": {
+      "label": "󰕾",
+      "show-per-app": false
+    },
+    "backlight": {
+      "label": "󰃟"
+    },
+    "mpris": {
+      "image-size": 64,
+      "image-radius": 10
+    }
+  }
+}

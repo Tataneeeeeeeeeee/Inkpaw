@@ -1,0 +1,3 @@
+/* clock — inside the "time" capsule, slightly bolder */
+#clock { font-weight: 700; padding: 0 12px; color: @on_surface; }
+#clock:hover { background-color: alpha(@a1, 0.20); }

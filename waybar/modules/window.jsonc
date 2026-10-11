@@ -1,0 +1,8 @@
+// hyprland/window — title of the focused window (disabled in layout by default)
+{
+    "hyprland/window": {
+        "format": "{title}",
+        "max-length": 50,
+        "separate-outputs": true
+    }
+}

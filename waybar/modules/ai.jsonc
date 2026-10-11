@@ -1,0 +1,9 @@
+// custom/ai — AI chat side panel (SUPER+I); configure it in Settings → AI assistant
+{
+    "custom/ai": {
+        "format": "󰚩",
+        "tooltip-format": "AI assistant (SUPER+I)",
+        "on-click": "$XDG_CONFIG_HOME/hypr/scripts/aichat.sh",
+        "on-click-right": "$XDG_CONFIG_HOME/hypr/scripts/settings-ui.sh 'AI assistant'"
+    }
+}

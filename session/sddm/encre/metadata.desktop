@@ -1,0 +1,19 @@
+# =============================================================================
+#  metadata.desktop — SDDM theme descriptor for "inkpaw-encre"
+# =============================================================================
+#  SDDM reads this file to find the QML entry point (MainScript) and the
+#  settings file (ConfigFile). QtVersion=6 makes SDDM start sddm-greeter-qt6.
+#  Installed by: sudo ./session/install.sh --sddm-theme
+# =============================================================================
+[SddmGreeterTheme]
+Name=Inkpaw — encre
+Description=Ink & parchment login screen (hand-drawn, with cats) for Inkpaw
+Author=Inkpaw
+License=OFL fonts (see fonts/OFL-*.txt), original cats
+Type=sddm-theme
+Version=1.0
+MainScript=Main.qml
+ConfigFile=theme.conf
+Theme-Id=inkpaw-encre
+Theme-API=2.0
+QtVersion=6

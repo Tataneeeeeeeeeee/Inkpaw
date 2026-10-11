@@ -1,0 +1,6 @@
+/* BAR_STYLE="minimal" — no backgrounds at all, just text and icons */
+window#waybar > box { background: transparent; border: none; padding: 0 4px; }
+#session, #time, #status, #system { background: transparent; margin: 2px 6px; }
+#session > widget > *, #time > widget > *, #status > widget > *, #system > widget > * {
+    text-shadow: 0 1px 3px alpha(black, 0.6);
+}

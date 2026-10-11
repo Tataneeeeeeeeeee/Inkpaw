@@ -1,0 +1,17 @@
+// network — Wi-Fi / Ethernet: click = Wi-Fi panel, middle = rofi menu, right = nmtui
+{
+    "network": {
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈀",
+        "format-disconnected": "󰤮",
+        "format-disabled": "󰤭",
+        "format-icons": ["󰤟", "󰤢", "󰤥", "󰤨"],
+        "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ipaddr}  ↓{bandwidthDownBytes} ↑{bandwidthUpBytes}",
+        "tooltip-format-ethernet": "{ifname}\n{ipaddr}",
+        "tooltip-format-disconnected": "Disconnected",
+        "interval": 5,
+        "on-click": "$XDG_CONFIG_HOME/hypr/scripts/quickpanel.sh wifi",
+        "on-click-middle": "$XDG_CONFIG_HOME/hypr/scripts/menus/wifi.sh",
+        "on-click-right": "kitty --class floating-tui -e nmtui"
+    }
+}

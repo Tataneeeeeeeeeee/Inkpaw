@@ -1,0 +1,212 @@
+/* =============================================================================
+   style/presets/encre.css — BAR_STYLE="encre" (skin "encre": ink & parchment)
+   =============================================================================
+   Mockups: .mockups/project/Mew-Main, Mew-Bar (bar + palette), Mew-Drawer
+   (hover drawer). Spec: hyprtheme/skins/encre/README.md.
+
+   The strip itself is invisible; every bar SECTION (left / center / right) is
+   one opaque parchment PLATE: 3 px ink outline, uneven corners, a hard 4 px
+   ink shadow (no blur). Modules are ink glyphs / Shantell Sans bold; what is
+   "active" is a small CHIP filled in ochre with an ink outline (launcher,
+   active workspace, caffeine on, open drawer), the power button is a brick
+   chip. Hover = the lighter "card" paper. GTK3: no transform, so the mockup's
+   tilted chips stay straight.
+
+   How waybar/build.py treats this preset (differences with the other styles)
+     * it is imported AFTER the style/modules/ files, so it overrides their accent
+       colors (the skin is monochrome ink whatever BAR_COLORED_ICONS says);
+     * several capsules side by side in one section are JOINED into one plate
+       (inner borders / corners / margins removed, generated rules);
+     * BAR_WORKSPACES_STYLE="numbers" adds presets/encre-numbers.css (brush
+       numbers in DISPLAY_FONT) instead of the generic numbered rules;
+     * BAR_SINGLE_CAPSULE: everything is one plate, the separators between
+       the former capsules become dashed ink lines.
+
+   Colors: roles only (style/colors.css, generated from the theme), so the
+   night sibling (encre-nuit) works: ink = @on_surface / @outline, paper =
+   @surface, ochre = @primary_container, brick = @error.
+   ============================================================================= */
+
+/* --- tokens of the skin -----------------------------------------------------------
+   card   = the raised, lighter paper (Material surface_container_lowest:
+            #fffaf0 / #1c1814), @card in colors.css.
+   shadow = the hard shadow (Material shadow: ink by day, near black at night). */
+@define-color encre_card   @card;
+@define-color encre_ink    @on_surface;
+@define-color encre_shadow @shadow;
+
+/* --- the strip: invisible (only the plates are drawn) -------------------------- */
+window#waybar > box {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+}
+
+/* --- plates = capsules (groups) -----------------------------------------------
+   margin: top / right / bottom / left — the right and bottom margins leave room
+   for the 4 px shadow inside the bar window (otherwise it is clipped). */
+#session, #time, #status, #system {
+    background-color: @surface;
+    border: 3px solid @outline;
+    border-radius: 16px 22px 14px 20px;
+    box-shadow: 4px 4px 0 @encre_shadow;
+    margin: 2px 8px 6px 4px;
+}
+
+/* --- modules = ink glyphs, chips on hover --------------------------------------
+   A transparent 3 px border is always there so hover / active chips do not
+   change the size of the module (nothing jumps). The chips below are
+   prefixed with "window#waybar" to win over this generic rule. */
+#session > widget > *, #time > widget > *, #status > widget > *, #system > widget > *, .extra {
+    color: @encre_ink;
+    font-weight: 700;
+    background: transparent;
+    border: 3px solid transparent;
+    border-radius: 10px 14px 9px 13px;
+    margin: 2px 1px;
+    box-shadow: none;
+    text-shadow: none;
+}
+#session > widget > *:hover, #time > widget > *:hover, #status > widget > *:hover,
+#system > widget > *:hover, .extra:hover {
+    background-color: @encre_card;
+    border-color: @outline;
+}
+/* Containers of sub-buttons (workspaces, taskbar, tray): the chips are their
+   buttons, not the container itself; same for the extras group (only its
+   chevron is a chip). "window#waybar" = more specific than the rule above. */
+window#waybar #workspaces, window#waybar #workspaces:hover,
+window#waybar #taskbar, window#waybar #taskbar:hover,
+window#waybar #tray, window#waybar #tray:hover,
+window#waybar #extras, window#waybar #extras:hover {
+    background: transparent;
+    border-color: transparent;
+}
+
+/* Every module in ink, even those the style/modules/ files tint with accents */
+#clock, #pulseaudio, #network, #bluetooth, #battery, #cpu, #memory, #mpris, #language,
+#custom-settings, #custom-ai, #custom-notifications, #custom-wallpaper, #backlight,
+#idle_inhibitor, #custom-launcher, #custom-chevron, #custom-power, #tray {
+    color: @encre_ink;
+}
+
+/* "off" states: faded ink */
+#pulseaudio.muted,
+#network.disconnected, #network.disabled,
+#bluetooth.disabled, #bluetooth.off,
+#mpris.paused,
+#custom-notifications.dnd-none, #custom-notifications.dnd-notification {
+    color: alpha(@encre_ink, 0.45);
+}
+/* unread notifications: accent text (dark ochre, readable on paper) */
+#custom-notifications.notification { color: @primary; }
+
+/* --- sizes: the clock a bit larger (no chip of its own), the icon-only buttons
+   larger than the text so the ink glyphs read like the mockup's drawn icons */
+#clock { font-size: 1.15em; }
+#network, #bluetooth, #custom-notifications, #custom-settings, #custom-ai,
+#custom-power, #custom-launcher, #custom-chevron, #idle_inhibitor, #custom-wallpaper {
+    font-size: 1.3em;
+}
+
+/* --- launcher: ochre chip (Mew-Main, left plate) --------------------------------- */
+window#waybar #custom-launcher {
+    background-color: @primary_container;
+    border-color: @outline;
+    color: @on_primary_container;
+    border-radius: 10px 14px 9px 13px;
+    padding: 0 9px;
+}
+window#waybar #custom-launcher:hover {
+    background-color: @encre_card;
+    color: @encre_ink;
+}
+
+/* --- power: brick chip (danger) --------------------------------------------------- */
+window#waybar #custom-power {
+    background-color: @error;
+    border-color: @outline;
+    color: @on_error;
+    border-radius: 14px 10px 15px 11px;
+}
+window#waybar #custom-power:hover {
+    background-color: @encre_card;
+    color: @error;
+}
+
+/* --- battery: brick chip when critical, accent when charging ---------------------- */
+#battery.charging, #battery.plugged { color: @encre_ink; }
+#battery.warning:not(.charging)     { color: @error; }
+window#waybar #battery.critical:not(.charging) {
+    color: @on_error;
+    background-color: @error;
+    border-color: @outline;
+}
+
+/* --- workspaces (dots: BAR_WORKSPACES_STYLE="dots") ------------------------------
+   Ink-ringed dots, the active one an ochre pill. The numbered look (the one the
+   skin sets) is in presets/encre-numbers.css. */
+#workspaces { padding: 0 4px; }
+#workspaces button {
+    min-width: 8px;
+    min-height: 8px;
+    margin: 10px 3px;
+    padding: 0;
+    border: 2px solid @outline;
+    border-radius: 6px 8px 5px 7px;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+}
+#workspaces button.empty  { border-color: alpha(@outline, 0.4); }
+#workspaces button.active { min-width: 24px; background-color: @primary_container; background-image: none; border-color: @outline; }
+#workspaces button.urgent { background-color: @error; }
+#workspaces button:hover:not(.active) { background-color: @encre_card; }
+
+/* --- taskbar: app icons, the active one on an ochre chip -------------------------- */
+#taskbar button {
+    border: 3px solid transparent;
+    border-radius: 10px 14px 9px 13px;
+    margin: 1px 1px;
+    background: transparent;
+}
+#taskbar button.active { background-color: @primary_container; border-color: @outline; }
+#taskbar button:hover  { background-color: @encre_card; border-color: @outline; }
+
+/* --- extras drawer (group/extras, Mew-Drawer) -------------------------------------
+   Closed: the chevron is a card chip. Hovered (drawer open): the chevron turns
+   ochre and the revealed modules sit in a dashed-outline card. */
+window#waybar #custom-chevron {
+    background-color: @encre_card;
+    border: 3px solid @outline;
+    border-radius: 12px 9px 13px 10px;
+    padding: 0 7px;
+}
+window#waybar #extras:hover #custom-chevron {
+    background-color: @primary_container;
+    color: @on_primary_container;
+}
+#extras .drawer > box {
+    background-color: @encre_card;
+    border: 2px dashed @outline;
+    border-radius: 12px 9px 14px 10px;
+    margin: 3px 4px;
+    padding: 0 4px;
+}
+#extras .drawer .extra { margin: 1px 1px; }
+#tray > .needs-attention { color: @error; }
+window#waybar #idle_inhibitor.activated {
+    background-color: @primary_container;
+    border-color: @outline;
+    color: @on_primary_container;
+}
+
+/* --- tooltips: ink note with paper text ------------------------------------------- */
+tooltip {
+    background: @encre_ink;
+    border: 2px solid @outline;
+    border-radius: 12px 9px 14px 10px;
+    padding: 4px 6px;
+}
+tooltip label { color: @surface; font-weight: 600; }

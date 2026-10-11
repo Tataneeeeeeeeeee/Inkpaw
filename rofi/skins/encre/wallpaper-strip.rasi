@@ -1,0 +1,102 @@
+/* =============================================================================
+   rofi/skins/encre/wallpaper-strip.rasi — wallpaper / theme strip, "encre" skin
+   =============================================================================
+   Used instead of rofi/themes/wallpaper-strip.rasi when UI_SKIN=encre by
+   hyprtheme/wallpaper-picker.sh and hyprtheme/static-picker.sh (which adds
+   its own -theme-str: 4 columns, picture only). Mockups Mew-Wallpapers /
+   Mew-Themes: a parchment band across the screen, ink lines top and bottom
+   (thicker bottom = the hard shadow), "Wallpaper" in Caveat Brush next to a
+   dashed filter and a napping cat, photos as paper cards with an ink outline;
+   the selected card is ochre. Rofi cannot rotate, tape or tear: cards stay
+   straight. Colors / fonts: ../../colors.rasi + tokens.rasi (GENERATED).
+   ============================================================================= */
+@import "../../colors.rasi"
+@import "tokens.rasi"
+
+configuration {
+    show-icons: true;
+    hover-select: true;
+    me-select-entry: "MouseSecondary";
+    me-accept-entry: "MousePrimary";
+}
+
+* {
+    font: @font-body;
+    background-color: transparent;
+    text-color: @ink;
+}
+
+window {
+    location: center;
+    width: 100%;
+    background-color: @paper;
+    border: 3px 0 8px 0;
+    border-color: @ink;
+    border-radius: 0;
+}
+
+mainbox { padding: 8px 40px 26px 40px; spacing: 14px; children: [ inputbar, listview ]; }
+
+/* Header: brush title, dashed filter, a cat napping on the band */
+inputbar {
+    orientation: horizontal;
+    spacing: 18px;
+    children: [ prompt, searchbox, spacer, cat ];
+}
+prompt {
+    font: @font-title-big;
+    vertical-align: 0.5;
+}
+searchbox {
+    expand: false;
+    width: 340px;
+    padding: 7px 14px;
+    margin: 20px 0 16px 0;
+    background-color: @card;
+    border: 2px dash;
+    border-color: @ink;
+    border-radius: 12px;
+    children: [ entry ];
+}
+entry {
+    placeholder: "Filter…";
+    placeholder-color: @muted;
+    cursor: text;
+    vertical-align: 0.5;
+}
+spacer { expand: true; }
+cat {
+    expand: false;
+    width: 130px;
+    background-image: @cat-sleep;
+}
+
+listview {
+    layout: vertical;
+    flow: horizontal;
+    columns: 7;
+    lines: 1;
+    fixed-columns: true;
+    spacing: 26px;
+    padding: 4px 8px 8px 4px;
+    scrollbar: false;
+    cycle: true;
+}
+
+/* Cards: card paper, ink outline thicker right / bottom (shadow) */
+element {
+    orientation: vertical;
+    padding: 10px 10px 8px 10px;
+    spacing: 6px;
+    border: 3px 6px 6px 3px;
+    border-color: @ink;
+    border-radius: 12px;
+    background-color: @card;
+}
+element normal.normal, element alternate.normal { background-color: @card; }
+element selected.normal, element selected.active {
+    background-color: @ochre;
+    text-color: @on-ochre;
+}
+element-icon { size: 300px; horizontal-align: 0.5; }
+element-text { horizontal-align: 0.5; font: @font-card; text-color: inherit; }

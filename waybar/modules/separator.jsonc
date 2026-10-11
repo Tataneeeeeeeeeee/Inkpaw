@@ -1,0 +1,7 @@
+// custom/sep — thin vertical line between groups inside the single capsule
+{
+    "custom/sep": {
+        "format": " ",
+        "tooltip": false
+    }
+}

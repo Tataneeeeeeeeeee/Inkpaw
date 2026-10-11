@@ -1,0 +1,21 @@
+// pulseaudio — sound: click = sound panel, middle = mute, right = pavucontrol, scroll = volume
+{
+    "pulseaudio": {
+        "format": "{icon}  {volume}",
+        "format-muted": "󰝟",
+        "format-bluetooth": "󰂰  {volume}",
+        "format-icons": {
+            "headphone": "󰋋",
+            "headset": "󰋎",
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "scroll-step": 5,
+        "max-volume": 100,
+        "on-click": "$XDG_CONFIG_HOME/hypr/scripts/quickpanel.sh sound",
+        "on-click-middle": "$XDG_CONFIG_HOME/hypr/scripts/osd.sh volume mute",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "$XDG_CONFIG_HOME/hypr/scripts/osd.sh volume up",
+        "on-scroll-down": "$XDG_CONFIG_HOME/hypr/scripts/osd.sh volume down",
+        "tooltip-format": "{desc} · {volume}%"
+    }
+}

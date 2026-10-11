@@ -1,0 +1,16 @@
+// bluetooth — click = Bluetooth panel, middle = rofi menu, right = Blueman
+{
+    "bluetooth": {
+        "format": "󰂯",
+        "format-disabled": "󰂲",
+        "format-off": "󰂲",
+        "format-connected": "󰂱 {num_connections}",
+        "tooltip-format": "{controller_alias}\n{num_connections} connected",
+        "tooltip-format-connected": "{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias} {device_battery_percentage}%",
+        "on-click": "$XDG_CONFIG_HOME/hypr/scripts/quickpanel.sh bluetooth",
+        "on-click-middle": "$XDG_CONFIG_HOME/hypr/scripts/menus/bluetooth.sh",
+        "on-click-right": "blueman-manager"
+    }
+}

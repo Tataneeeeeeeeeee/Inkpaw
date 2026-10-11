@@ -1,0 +1,122 @@
+/* =============================================================================
+   spotlight/style.css — sectioned Spotlight (HyDE-style panel)
+   =============================================================================
+   colors.css (generated) defines @panel @fg @a1…@a6, fonts and the side picture.
+   ============================================================================= */
+
+window.spotlight-backdrop { background: alpha(black, 0.18); }
+
+.panel {
+    background: @panel;
+    border: 2px solid @a1;
+    box-shadow: 0 30px 70px alpha(black, 0.45);
+}
+
+.content { padding: 22px 22px 14px 22px; }
+
+/* Search field */
+entry.search {
+    background: @panel_high;
+    color: @fg;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 14px;
+    min-height: 26px;
+    font-size: 17px;
+    box-shadow: none;
+    outline: none;
+    caret-color: @a1;
+}
+entry.search image { color: @a1; margin-right: 6px; }
+
+.scroll, .results { background: transparent; }
+.results { margin-top: 10px; }
+
+/* Section separator: SMALL TITLE ───────────── count */
+row.section {
+    padding: 14px 6px 4px 6px;
+    background: transparent;
+    min-height: 0;
+}
+row.section:first-child { padding-top: 4px; }
+.section-title {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: @a1;
+}
+.section-line { background: alpha(@fg, 0.12); min-height: 1px; }
+.section-count { font-size: 10px; color: alpha(@fg, 0.45); }
+/* one accent per kind of result */
+.section-title.kind-calc      { color: @a6; }
+.section-title.kind-apps      { color: @a1; }
+.section-title.kind-actions   { color: @a5; }
+.section-title.kind-files     { color: @a3; }
+.section-title.kind-web       { color: @a2; }
+.section-title.kind-clipboard { color: @a5; }
+.section-title.kind-emoji     { color: @a4; }
+.section-title.kind-run       { color: @a4; }
+
+/* Result rows */
+row.item {
+    padding: 7px 12px;
+    margin: 1px 0;
+    border-radius: 10px;
+    background: transparent;
+    transition: background 120ms ease-out;
+}
+row.item:hover { background: alpha(@fg, 0.06); }
+row.item:selected {
+    background-image: linear-gradient(90deg, @a1, @a3);
+}
+.item-glyph    { font-size: 24px; min-width: 28px; font-family: "Noto Color Emoji", sans-serif; }
+.item-title    { color: @fg; font-size: 14px; font-weight: 600; }
+.item-subtitle { color: @fg_dim; font-size: 11px; }
+row.item:selected .item-title    { color: @panel; }
+row.item:selected .item-subtitle { color: alpha(@panel, 0.75); }
+row.item.kind-calc .item-title   { font-size: 20px; font-weight: 800; }
+
+.empty { color: alpha(@fg, 0.5); padding: 30px; }
+
+.hints {
+    margin-top: 10px;
+    font-size: 10px;
+    color: alpha(@fg, 0.45);
+}
+
+
+/* ============================================================================
+   style = "hyde" (config.toml): dark translucent list card + slanted picture
+   ============================================================================ */
+.panel-hyde { background: transparent; }
+.panel-hyde .card {
+    background-color: alpha(@panel, 0.94);
+    border-radius: 18px 0 0 18px;
+    padding: 26px 20px 14px 22px;
+    box-shadow: 0 24px 60px alpha(black, 0.40);
+}
+.panel-hyde entry.search {
+    background: transparent;
+    border-bottom: 1px solid alpha(@fg, 0.10);
+    border-radius: 0;
+    padding: 4px 6px 10px 6px;
+    font-size: 13px;
+    margin-bottom: 4px;
+}
+.panel-hyde entry.search image { opacity: 0.6; }
+.panel-hyde row.item {
+    padding: 8px 12px;
+    margin: 2px 0;
+    border-radius: 14px;
+}
+.panel-hyde row.item:selected { background-image: none; background-color: alpha(@a1, 0.75); }
+.panel-hyde row.item:selected .item-title { color: @panel; }
+.panel-hyde row.item:selected .item-subtitle { color: alpha(@panel, 0.7); }
+.panel-hyde .item-title { font-size: 12px; font-weight: 500; }
+.panel-hyde .item-subtitle { font-size: 10px; }
+.panel-hyde .item-icon { -gtk-icon-size: 26px; }
+.panel-hyde row.section { padding: 10px 6px 2px 8px; }
+.panel-hyde .section-title { font-size: 9px; letter-spacing: 2px; }
+.panel-hyde .section-line { background: alpha(@fg, 0.07); }
+.panel-hyde .hints { font-size: 9px; opacity: 0.35; margin-top: 8px; }
+window.spotlight-backdrop.hyde { background: transparent; }   /* no dimming, like HyDE */

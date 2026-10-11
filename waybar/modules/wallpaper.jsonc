@@ -1,0 +1,10 @@
+// custom/wallpaper — wallpaper / theme picker (right click: random wallpaper)
+{
+    "custom/wallpaper": {
+        "format": "󰸉",
+        "tooltip-format": "Wallpaper &amp; theme (SUPER+CTRL+W)",
+        "on-click": "$XDG_CONFIG_HOME/hyprtheme/wallpaper-picker.sh",
+        "on-click-right": "$XDG_CONFIG_HOME/hyprtheme/theme.sh random",
+        "on-click-middle": "$XDG_CONFIG_HOME/hyprtheme/theme.sh mode toggle"
+    }
+}

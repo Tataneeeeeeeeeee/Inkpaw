@@ -1,0 +1,72 @@
+/* =============================================================================
+   rofi/themes/wallpaper-strip.rasi — wallpaper selector (HyDE-style)
+   =============================================================================
+   A full-width blurred band across the screen with a row of portrait cards.
+   Scroll / arrows to move, Enter or click to apply. Cards: 360x500 thumbnails
+   made by hyprtheme/wallpaper-picker.sh. ../colors.rasi is GENERATED.
+   ============================================================================= */
+@import "../colors.rasi"
+
+configuration {
+    show-icons: true;
+    hover-select: true;
+    me-select-entry: "MouseSecondary";
+    me-accept-entry: "MousePrimary";
+}
+
+* {
+    font: @ui-font;
+    background-color: transparent;
+    text-color: @on-surface;
+}
+
+window {
+    location: center;
+    width: 100%;
+    background-color: @band;
+    border: 1px 0 1px 0;
+    border-color: @a1-soft;
+    border-radius: 0;
+}
+
+mainbox { padding: 26px 40px 22px 40px; spacing: 16px; children: [ inputbar, listview ]; }
+
+/* Small centered filter field */
+inputbar {
+    expand: false;
+    width: 420px;
+    padding: 9px 14px;
+    background-color: @panel-high;
+    border-radius: 10px;
+    children: [ prompt, entry ];
+    spacing: 10px;
+}
+prompt { text-color: @a1; }
+entry  { placeholder: "Filter…"; placeholder-color: @on-surface-variant; }
+
+listview {
+    layout: vertical;
+    flow: horizontal;
+    columns: 7;
+    lines: 1;
+    fixed-columns: true;
+    spacing: 22px;
+    scrollbar: false;
+    cycle: true;
+}
+
+element {
+    orientation: vertical;
+    padding: 6px;
+    spacing: 10px;
+    border-radius: 16px;
+    border: 3px;
+    border-color: transparent;
+}
+element selected.normal {
+    background-color: @a1-soft;
+    border-color: @a1;
+}
+element-icon { size: 330px; horizontal-align: 0.5; }
+element-text { horizontal-align: 0.5; text-color: @on-surface-variant; font: @ui-font; }
+element selected.normal element-text { text-color: @on-surface; }

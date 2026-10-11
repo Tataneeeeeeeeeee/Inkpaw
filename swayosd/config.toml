@@ -1,0 +1,7 @@
+# =============================================================================
+#  swayosd/config.toml — on-screen display for volume / brightness
+# =============================================================================
+#  Started by hypr/conf/autostart.lua ("osd"). Keys call hypr/scripts/osd.sh.
+[server]
+show_percentage = true
+max_volume = 100

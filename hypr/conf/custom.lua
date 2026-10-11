@@ -1,0 +1,6 @@
+-- =============================================================================
+--  conf/custom.lua — personal overrides, loaded last
+-- =============================================================================
+--  Put quick experiments here instead of editing the modules. Anything set
+--  here wins over the rest of the config. Empty by default.
+-- =============================================================================

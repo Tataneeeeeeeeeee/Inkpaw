@@ -1,0 +1,66 @@
+# =============================================================================
+#  elephant/websearch.toml — web search engines for Walker
+# =============================================================================
+#  Fields per [[entries]] (from Elephant's websearch provider):
+#    name     label shown in Walker
+#    url      %TERM% is replaced by your query
+#    default  true = shown in the normal mixed search (SUPER+SPACE)
+#    prefix   type it first to use only this engine, e.g. "yt lofi"
+#    icon     icon name from your icon theme
+#  With "@" (Walker prefix) every engine is listed.
+# =============================================================================
+
+[[entries]]
+default = true
+name = "Google"
+url = "https://www.google.com/search?q=%TERM%"
+icon = "google"
+
+[[entries]]
+default = true
+name = "Google Maps"
+prefix = "map"
+url = "https://www.google.com/maps/search/%TERM%"
+icon = "maps"
+
+[[entries]]
+name = "YouTube"
+prefix = "yt"
+url = "https://www.youtube.com/results?search_query=%TERM%"
+icon = "youtube"
+
+[[entries]]
+name = "Wikipedia"
+prefix = "wiki"
+url = "https://fr.wikipedia.org/w/index.php?search=%TERM%"
+icon = "wikipedia"
+
+[[entries]]
+name = "DuckDuckGo"
+prefix = "ddg"
+url = "https://duckduckgo.com/?q=%TERM%"
+icon = "web-browser"
+
+[[entries]]
+name = "OpenStreetMap"
+prefix = "osm"
+url = "https://www.openstreetmap.org/search?query=%TERM%"
+icon = "globe"
+
+[[entries]]
+name = "Arch Wiki"
+prefix = "aw"
+url = "https://wiki.archlinux.org/index.php?search=%TERM%"
+icon = "system-search"
+
+[[entries]]
+name = "AUR"
+prefix = "aur"
+url = "https://aur.archlinux.org/packages?K=%TERM%"
+icon = "system-search"
+
+[[entries]]
+name = "GitHub"
+prefix = "gh"
+url = "https://github.com/search?q=%TERM%"
+icon = "system-search"

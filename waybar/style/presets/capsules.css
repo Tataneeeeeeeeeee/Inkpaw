@@ -1,0 +1,7 @@
+/* BAR_STYLE="capsules" — invisible strip, every capsule is a floating pill */
+window#waybar > box { background: transparent; border: none; padding: 0; }
+#session, #time, #status, #system {
+    border: 1px solid alpha(@a1, 0.22);
+    box-shadow: 0 2px 8px alpha(black, 0.25);
+    margin: 4px 3px;
+}

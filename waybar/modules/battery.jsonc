@@ -1,0 +1,12 @@
+// battery — icon + %: click = battery & power panel (hidden on desktops)
+{
+    "battery": {
+        "states": { "warning": 25, "critical": 12 },
+        "format": "{icon}  {capacity}",
+        "format-charging": "󰂄  {capacity}",
+        "format-plugged": "󰚥  {capacity}",
+        "format-icons": ["󰁺", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"],
+        "tooltip-format": "{capacity}% · {timeTo} · {power:.1f} W",
+        "on-click": "$XDG_CONFIG_HOME/hypr/scripts/quickpanel.sh battery"
+    }
+}
