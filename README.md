@@ -12,7 +12,7 @@
   <a href="docs/">Documentation</a>
 </p>
 
-<p align="center"><img src="docs/screenshots/desktop.webp" alt="Inkpaw desktop: tiled terminals under the bar, colors taken from the wallpaper" width="100%"></p>
+<p align="center"><img src="docs/screenshots/desktop.webp" alt="Inkpaw desktop in the encre style: tiled terminals under the parchment bar" width="100%"></p>
 
 ---
 
@@ -82,15 +82,15 @@ Manual installation, the dependency list and uninstalling are described in
 
 ## Screenshots
 
-All taken with the default look; the colors come from the wallpaper (“aurora north”, drawn by `hyprtheme/generate-wallpapers.sh`).
+Taken with the hand-drawn **“encre” style** (Settings → Appearance → Interface style) in light mode, on the “ink hills” wallpaper drawn by `hyprtheme/generate-wallpapers.sh`; the colors come from the wallpaper. Without the style, the same apps use a soft-glass look.
 
 | | |
 |---|---|
-| <img src="docs/screenshots/spotlight.webp" alt="Spotlight search"><br>**Spotlight** — apps, calculator, web, emoji, actions (`SUPER+SPACE`) | <img src="docs/screenshots/quick-panel.webp" alt="Quick panel sections and notifications"><br>**Quick panel** — calendar, sound, battery and notifications, from the bar icons |
+| <img src="docs/screenshots/spotlight.webp" alt="Spotlight search"><br>**Spotlight** — apps, calculator, web, emoji, actions, with a cat peeking over (`SUPER+SPACE`) | <img src="docs/screenshots/quick-panel.webp" alt="Quick panel sections and notifications"><br>**Quick panel** — calendar, sound, battery and notifications, from the bar icons |
 | <img src="docs/screenshots/ai-assistant.webp" alt="AI assistant docked next to the tiled windows"><br>**AI assistant** — docks beside your windows, full Markdown (`SUPER+I`) | <img src="docs/screenshots/settings.webp" alt="Settings window"><br>**Settings** — every option, applied live (`SUPER+CTRL+S`) |
-| <img src="docs/screenshots/wallpapers.webp" alt="Wallpaper selector"><br>**Wallpaper selector** — the palette follows (`SUPER+CTRL+W`) | <img src="docs/screenshots/themes.webp" alt="Static theme selector"><br>**Static themes** — Catppuccin, Tokyo Night, Nord, Encre… (`CTRL+ALT+T`) |
-| <img src="docs/screenshots/keybindings.webp" alt="Keybindings cheat sheet"><br>**Cheat sheet** — every shortcut, searchable (`SUPER+CTRL+K`) | <img src="docs/screenshots/power-menu.webp" alt="Power menu"><br>**Power menu** (`SUPER+CTRL+P`) |
-| <img src="docs/screenshots/lock-screen.webp" alt="Lock screen"><br>**Lock screen** — hyprlock in the theme colors | <img src="docs/screenshots/light-theme.webp" alt="Light theme"><br>**Light themes** — `SUPER+CTRL+T` switches light ↔ dark |
+| <img src="docs/screenshots/wallpapers.webp" alt="Wallpaper selector"><br>**Wallpaper selector** — taped photos on a torn parchment band (`SUPER+CTRL+W`) | <img src="docs/screenshots/themes.webp" alt="Static theme selector"><br>**Themes** — a mini desktop in each theme's colors (`CTRL+ALT+T`) |
+| <img src="docs/screenshots/keybindings.webp" alt="Keybindings cheat sheet"><br>**Cheat sheet** — every shortcut by category, with a filter (`SUPER+CTRL+K`) | <img src="docs/screenshots/power-menu.webp" alt="Power menu"><br>**Power menu** — one cat per action, keyboard or mouse (`SUPER+CTRL+P`) |
+| <img src="docs/screenshots/lock-screen.webp" alt="Lock screen"><br>**Lock screen** — hyprlock in the theme colors | <img src="docs/screenshots/night-theme.webp" alt="The same desktop at night"><br>**Night mode** — `SUPER+CTRL+T` switches light ↔ dark |
 
 ## First steps
 
