@@ -5,8 +5,15 @@
 #  Usage: accents.py <primary-hex> <dark|light> [explicit,hexes] [wallbash|rainbow]
 #  wallbash (default): tone-on-tone around the wallpaper hue (HyDE look)
 #  rainbow: 6 hues around the color wheel (explicit static accents used here)
-#  Prints {"accent": {"a1": "#rrggbb", "a1_hex": "rrggbb", ...}} for matugen
-#  (--import-json-string). Templates use {{accent.a1}} … {{accent.a6}}.
+#  Prints {"accent": {"a1": "#rrggbb", "a1_hex": "rrggbb", ...},
+#          "ansi": {"red": "#rrggbb", "bright_red": …, …}} for matugen
+#  (--import-json-string). Templates use {{accent.a1}} … {{accent.a6}} and
+#  {{ansi.red}} … {{ansi.bright_cyan}} (terminal colors).
+#
+#  ANSI colors: fixed hues (red, green, yellow, blue, magenta, cyan) pulled a
+#  little toward the wallpaper hue, with a lightness that always reads on the
+#  terminal background. (matugen's base16 is sampled from the image pixels and
+#  turns near-black on a dark wallpaper.)
 #
 #  Without explicit colors, the primary hue is rotated around the color wheel
 #  with a vivid saturation, so every module gets its own color that still
@@ -46,4 +53,23 @@ out = {}
 for i, c in enumerate(colors, 1):
     out[f"a{i}"] = "#" + c
     out[f"a{i}_hex"] = c
-print(json.dumps({"accent": out}))
+
+# --- terminal colors -----------------------------------------------------------
+ph, _pl, ps = colorsys.rgb_to_hls(*(int(primary[i:i + 2], 16) / 255 for i in (0, 2, 4)))
+HUES = {"red": 0, "green": 125, "yellow": 45, "blue": 215, "magenta": 300, "cyan": 180}
+PULL = 0.12                     # how much each hue leans toward the wallpaper hue
+
+
+def lean(base):
+    """Move the hue `base` (degrees) PULL of the way toward the primary hue."""
+    d = ((ph * 360 - base + 180) % 360) - 180
+    return ((base + d * PULL) % 360) / 360
+
+
+dark = mode == "dark"
+ansi = {}
+for name, hue in HUES.items():
+    sat = 0.62 if dark else 0.58
+    for prefix, light in (("", 0.68 if dark else 0.40), ("bright_", 0.78 if dark else 0.32)):
+        ansi[prefix + name] = "#" + to_hex(*colorsys.hls_to_rgb(lean(hue), light, sat))
+print(json.dumps({"accent": out, "ansi": ansi}))

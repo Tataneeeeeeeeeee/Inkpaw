@@ -7,9 +7,12 @@
 <p align="center">
   <a href="#install">Install</a> ·
   <a href="#features">Features</a> ·
+  <a href="#screenshots">Screenshots</a> ·
   <a href="#first-steps">First steps</a> ·
   <a href="docs/">Documentation</a>
 </p>
+
+<p align="center"><img src="docs/screenshots/desktop.webp" alt="Inkpaw desktop: tiled terminals under the bar, colors taken from the wallpaper" width="100%"></p>
 
 ---
 
@@ -76,6 +79,18 @@ Manual installation, the dependency list and uninstalling are described in
 - **Tested.** `./test.sh verify` checks the Hyprland config on every monitor
   profile, every JSON/TOML/rofi/shell file, and renders every theme — in a
   throw-away copy, never in your config.
+
+## Screenshots
+
+All taken with the default look; the colors come from the wallpaper (“aurora north”, drawn by `hyprtheme/generate-wallpapers.sh`).
+
+| | |
+|---|---|
+| <img src="docs/screenshots/spotlight.webp" alt="Spotlight search"><br>**Spotlight** — apps, calculator, web, emoji, actions (`SUPER+SPACE`) | <img src="docs/screenshots/quick-panel.webp" alt="Quick panel sections and notifications"><br>**Quick panel** — calendar, sound, battery and notifications, from the bar icons |
+| <img src="docs/screenshots/ai-assistant.webp" alt="AI assistant docked next to the tiled windows"><br>**AI assistant** — docks beside your windows, full Markdown (`SUPER+I`) | <img src="docs/screenshots/settings.webp" alt="Settings window"><br>**Settings** — every option, applied live (`SUPER+CTRL+S`) |
+| <img src="docs/screenshots/wallpapers.webp" alt="Wallpaper selector"><br>**Wallpaper selector** — the palette follows (`SUPER+CTRL+W`) | <img src="docs/screenshots/themes.webp" alt="Static theme selector"><br>**Static themes** — Catppuccin, Tokyo Night, Nord, Encre… (`CTRL+ALT+T`) |
+| <img src="docs/screenshots/keybindings.webp" alt="Keybindings cheat sheet"><br>**Cheat sheet** — every shortcut, searchable (`SUPER+CTRL+K`) | <img src="docs/screenshots/power-menu.webp" alt="Power menu"><br>**Power menu** (`SUPER+CTRL+P`) |
+| <img src="docs/screenshots/lock-screen.webp" alt="Lock screen"><br>**Lock screen** — hyprlock in the theme colors | <img src="docs/screenshots/light-theme.webp" alt="Light theme"><br>**Light themes** — `SUPER+CTRL+T` switches light ↔ dark |
 
 ## First steps
 
