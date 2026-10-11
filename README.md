@@ -122,6 +122,7 @@ Settings is also a line in `hypr/settings.conf` — see
 | [Apps](docs/apps.md) | Spotlight, quick panel, notifications, AI assistant, menus, desktop cat |
 | [Keybindings](docs/keybindings.md) | every shortcut |
 | [Development](docs/development.md) | project layout, tests, adding a module / theme / bar style |
+| [Website](site/) | the project's site (English + French, light + dark), built from `site/content/` |
 
 ## Requirements
 

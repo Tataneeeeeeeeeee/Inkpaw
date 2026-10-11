@@ -1,0 +1,261 @@
+{
+  "lang": "fr",
+  "locale": "fr_FR",
+  "other": "en",
+  "other_label": "English",
+  "other_short": "EN",
+  "nav": {
+    "skip": "Aller au contenu",
+    "features": "Fonctionnalités",
+    "screenshots": "Captures",
+    "install": "Installer",
+    "docs": "Documentation",
+    "github": "GitHub",
+    "theme": "Basculer clair / sombre",
+    "language": "Read in English",
+    "copy": "Copier",
+    "copied": "Copié !"
+  },
+  "meta": {
+    "home": ["Inkpaw — un bureau Hyprland dessiné à l'encre", "Inkpaw est un bureau Hyprland 0.56 complet et modulaire en Lua : ses couleurs viennent de votre fond d'écran, tout se règle dans une seule appli, avec un style dessiné à l'encre sur parchemin."],
+    "install": ["Installer Inkpaw — en une ligne", "Installez Inkpaw sur Arch Linux en une commande. Il ajoute une session à côté de la vôtre et n'écrit jamais dans ~/.config."],
+    "screenshots": ["Inkpaw — captures", "Tous les écrans d'Inkpaw : bureau, Spotlight, panneau rapide, assistant IA, Réglages, sélecteurs, pense-bête, menu d'arrêt, verrouillage."],
+    "docs": ["Inkpaw — documentation", "Comment fonctionne Inkpaw : installation, configuration, thèmes, barre, applis, raccourcis et développement."]
+  },
+  "home": {
+    "tag": "HYPRLAND 0.56 · LUA · ARCH",
+    "title": "Un bureau dessiné à l'encre.",
+    "lead": "Inkpaw est une configuration Hyprland complète et modulaire : barre, lanceur, menus, panneau rapide, écran de verrouillage et assistant IA — aux couleurs de votre fond d'écran, réglable depuis une seule appli.",
+    "cta_install": "Installer Inkpaw",
+    "cta_shots": "Le voir en action",
+    "logo_alt": "Logo Inkpaw : un chat ocre endormi au-dessus du nom",
+    "oneline": "En une ligne",
+    "oneline_note": "Demande avant chaque étape. Ne touche jamais à <code>~/.config</code> : Inkpaw est une session à part.",
+    "oneline_more": "Options et installation manuelle →",
+    "hero_alt": "Le bureau Inkpaw en style encre : trois terminaux en mosaïque sous la barre parchemin",
+    "hero_alt_dark": "Le même bureau en mode nuit",
+    "hero_caption": "Le style « encre » sur le fond aux collines d'encre dessiné par le projet — en mode clair ou nuit.",
+    "features_title": "Tout, dans une seule boîte",
+    "features_lead": "Chaque partie est un module qu'on peut couper, chaque fichier est commenté, et chaque valeur vit dans <code>hypr/settings.conf</code>.",
+    "features": [
+      ["ochre", "Fond d'écran → palette", "Choisissez un fond et tout suit : bordures, barre, menus, notifications, terminal, applis GTK et Firefox. Neuf thèmes fixes, clairs et sombres."],
+      ["moss", "Une seule appli Réglages", "Une fenêtre GTK 4 pour chaque option — barre, polices, espacements, écrans, clavier, applis par défaut, fournisseur d'IA. En direct, avec un retour arrière par ligne."],
+      ["brick", "Recherche Spotlight", "Applis, calculatrice, fichiers, émojis, presse-papiers, web et cartes, actions — une liste avec une section titrée pour chaque."],
+      ["sky", "Panneau rapide", "Wi-Fi, Bluetooth, son par appli, luminosité en DDC/CI, batterie et mode d'énergie, notifications, calendrier, médias — des menus instantanés."],
+      ["ochre", "Assistant IA", "Une fenêtre latérale qui se range à côté de vos fenêtres. Conversations, Markdown complet, Claude ou n'importe quelle API compatible OpenAI."],
+      ["moss", "Testé, modulaire", "Un sujet par fichier, un module par ligne. <code>./test.sh verify</code> vérifie chaque profil d'écran et rend chaque thème dans une copie jetable."]
+    ],
+    "how_title": "Votre config reste la vôtre",
+    "how_p1": "Inkpaw s'installe comme une seconde session dans votre écran de connexion. À chaque connexion, il construit son propre dossier de config — des liens vers le repo pour ses applis, des liens vers votre vrai <code>~/.config</code> pour tout le reste — et lance Hyprland dessus.",
+    "how_p2": "Votre navigateur, votre éditeur et vos applis de discussion gardent leurs réglages. Votre session habituelle n'est pas touchée. Supprimez un fichier et Inkpaw disparaît.",
+    "how_steps": [
+      ["Lancez l'installeur", "Il clone le repo, installe les paquets manquants et dessine les fonds d'écran — en demandant d'abord."],
+      ["Choisissez « Hyprland — Inkpaw »", "Déconnectez-vous et choisissez la nouvelle session dans l'écran de connexion. Une fenêtre de bienvenue s'ouvre."],
+      ["Faites-en le vôtre", "<kbd>SUPER</kbd>+<kbd>CTRL</kbd>+<kbd>S</kbd> pour les Réglages, <kbd>SUPER</kbd>+<kbd>CTRL</kbd>+<kbd>K</kbd> pour tous les raccourcis. Vos modifications du repo s'appliquent en direct."]
+    ],
+    "gallery_title": "Petit tour",
+    "gallery_all": "Toutes les captures →",
+    "gallery": ["spotlight", "ai-assistant", "power-menu", "themes"],
+    "duo_title": "Jour ou nuit, verre ou encre",
+    "duo_text": "Passez du clair au sombre avec <kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>T</kbd>. Envie de plus de sobriété ? Revenez au style verre dépoli par défaut dans les Réglages — vos couleurs, votre fond et vos fenêtres ne bougent pas.",
+    "duo_pills": ["9 thèmes fixes", "15 fonds dessinés", "n'importe quel fond → une palette"]
+  },
+  "shots": {
+    "title": "Petit tour",
+    "lead": "Chaque écran du style « encre », en mode clair, sur le fond aux collines d'encre. Choisissez-en un pour l'agrandir.",
+    "filters_label": "Filtrer les captures",
+    "filters": [["all", "Tout"], ["desktop", "Bureau"], ["apps", "Applis"], ["menus", "Menus"]],
+    "show": "Afficher",
+    "aside_title": "Pas fan de l'encre ?",
+    "aside_text": "Les mêmes applis existent aussi en style verre dépoli par défaut — changez le style d'interface dans Réglages → Appearance. Les couleurs suivent votre fond d'écran dans les deux cas.",
+    "items": {
+      "desktop": ["Bureau", "", "Des terminaux en mosaïque sous la barre parchemin.", "Le bureau Inkpaw avec trois terminaux en mosaïque"],
+      "night-theme": ["Mode nuit", "SUPER+CTRL+T", "Le même bureau après un passage clair ↔ sombre.", "Le bureau en mode nuit"],
+      "spotlight": ["Spotlight", "SUPER+SPACE", "Applis, calculatrice, web, émojis et actions dans une seule liste.", "La recherche Spotlight avec un chat qui dépasse du cadre"],
+      "quick-panel": ["Panneau rapide", "", "Calendrier, son, batterie et notifications, depuis les icônes de la barre.", "Les sections du panneau rapide"],
+      "ai-assistant": ["Assistant IA", "SUPER+I", "Se range à côté de vos fenêtres ; réponses en Markdown complet.", "L'assistant IA rangé à côté des terminaux"],
+      "settings": ["Réglages", "SUPER+CTRL+S", "Chaque option, appliquée en direct.", "La fenêtre Réglages, page Apparence"],
+      "wallpapers": ["Fonds d'écran", "SUPER+CTRL+W", "Des photos scotchées sur une bande de parchemin déchirée.", "Le sélecteur de fonds d'écran"],
+      "themes": ["Thèmes", "CTRL+ALT+T", "Un mini bureau aux couleurs de chaque thème.", "Le sélecteur de thèmes avec des mini bureaux"],
+      "keybindings": ["Pense-bête", "SUPER+CTRL+K", "Tous les raccourcis par catégorie, avec un filtre.", "Le pense-bête des raccourcis"],
+      "power-menu": ["Menu d'arrêt", "SUPER+CTRL+P", "Un chat par action, au clavier ou à la souris.", "Le menu d'arrêt avec un chat par action"],
+      "lock-screen": ["Verrouillage", "SUPER+L", "Une horloge au pinceau et un chat sur la carte du mot de passe.", "L'écran de verrouillage"]
+    }
+  },
+  "install": {
+    "title": "Installer en une ligne",
+    "lead": "Sur Arch Linux ou une distribution basée sur Arch, avec Hyprland 0.56 ou plus récent. Inkpaw ajoute une session à côté de la vôtre et n'écrit jamais dans <code>~/.config</code>.",
+    "cmd_title": "La commande",
+    "cmd_note": "Vous préférez la lire d'abord ? Faites un <code>git clone</code> du repo et lancez <code>./install.sh</code> depuis le clone — mêmes étapes.",
+    "steps_title": "Ce qu'elle fait — en demandant à chaque fois",
+    "steps": [
+      ["Récupère les fichiers", "Clone Inkpaw dans <code>~/.local/share/inkpaw/repo</code>, ou le met à jour."],
+      ["Installe ce qui manque", "Hyprland, Waybar, swaync, matugen, Walker… avec <code>yay</code> ou <code>paru</code>."],
+      ["Reprend votre clavier", "Garde la disposition du système (<code>localectl</code>) comme réglage."],
+      ["Dessine les fonds d'écran", "15 fonds générés dans <code>~/Pictures/wallpapers</code>, environ une minute."],
+      ["Ajoute la session", "« Hyprland — Inkpaw » dans votre écran de connexion, avec <code>sudo</code>."]
+    ],
+    "opt_title": "Options",
+    "opt_note": "À passer après <code>bash -s --</code> quand le script arrive par un tube, par exemple <code>… | bash -s -- --yes --sddm-theme</code>",
+    "opt_head": ["Option", "Effet"],
+    "options": [
+      ["--yes", "répondre oui à toutes les questions"],
+      ["--sddm-theme", "installer aussi l'écran de connexion SDDM dessiné à la main"],
+      ["--no-deps", "ne pas installer de paquets"],
+      ["--no-wallpapers", "ne pas dessiner les fonds d'écran"],
+      ["--no-session", "ne pas ajouter la session — aucun sudo"],
+      ["--dir DOSSIER", "cloner ailleurs"],
+      ["--branch NOM", "utiliser une autre branche"]
+    ],
+    "manual_title": "À la main",
+    "manual_c1": "# récupérer",
+    "manual_c2": "# vérifier, puis ajouter la session",
+    "needs_title": "Il vous faut",
+    "needs": [
+      "Arch Linux, ou une distribution basée dessus",
+      "Hyprland 0.56+ (configuration en Lua)",
+      "un écran de connexion qui lit les sessions Wayland — SDDM, GDM, ly…",
+      "<code>yay</code> ou <code>paru</code> pour les paquets AUR (Walker, Elephant)"
+    ],
+    "needs_note": "<code>./test.sh deps</code> liste ce qui manque et affiche la commande exacte pour l'installer.",
+    "un_title": "Vous changez d'avis ?",
+    "un_text": "Retirez la session et les dossiers d'Inkpaw. Votre <code>~/.config</code> n'a jamais été modifié.",
+    "next": "Ensuite : lire la documentation →"
+  },
+  "docs": {
+    "title": "Documentation",
+    "nav_title": "Guides",
+    "edit": "Modifier cette doc sur GitHub →",
+    "crumb": "DOC",
+    "guides": [
+      {
+        "id": "installation", "title": "Installation",
+        "lead": "Une ligne sur Arch Linux, une session à côté de la vôtre, rien d'écrit dans ~/.config.",
+        "blocks": [
+          ["h", "Installation en une ligne"],
+          ["code", "curl -fsSL https://raw.githubusercontent.com/Tataneeeeeeeeeee/Inkpaw/main/install.sh | bash"],
+          ["p", "L'installeur demande avant chaque étape qui installe quelque chose ou demande <code>sudo</code> : fichiers, paquets, clavier, fonds d'écran, session. Ses options sont sur la <a href=\"install.html\">page d'installation</a>."],
+          ["h", "Comment marche la session"],
+          ["p", "À chaque connexion, <code>session/start.sh</code> reconstruit <code>~/.local/share/inkpaw/session-root</code> : des liens vers le repo pour les dossiers d'Inkpaw, des liens vers votre vrai <code>~/.config</code> pour tout le reste. Il y fait pointer <code>XDG_CONFIG_HOME</code>, puis lance Hyprland."],
+          ["p", "L'état propre d'Inkpaw vit dans <code>~/.local/state/inkpaw</code> (vos réglages, le dernier thème, les conversations, l'historique des notifications) et <code>~/.cache/inkpaw</code>."],
+          ["h", "Dépannage"],
+          ["table", ["Problème", "Solution"], [
+            ["la session ne démarre pas", "choisissez votre session habituelle, lisez <code>~/.local/share/inkpaw/session.log</code>, lancez <code>./test.sh verify</code>"],
+            ["il manque quelque chose", "<code>./test.sh deps</code>"],
+            ["les notifications ignorent le thème", "<code>hypr/scripts/notifications.sh restart</code> (un autre gestionnaire a pris la place)"],
+            ["mauvaise disposition de clavier", "Réglages → Displays → Keyboard &amp; mouse"]
+          ]],
+          ["tip", "Pour mettre à jour, un <code>git pull</code> dans le repo suffit (ou relancez l'installeur). Vos réglages vivent hors du repo et survivent aux mises à jour."]
+        ]
+      },
+      {
+        "id": "configuration", "title": "Configuration",
+        "lead": "Chaque valeur vit dans un seul fichier, chaque changement dans les Réglages est une ligne d'état — vos valeurs par défaut ne sont jamais réécrites.",
+        "blocks": [
+          ["h", "Où vivent les valeurs"],
+          ["table", ["Fichier", "Contenu"], [
+            ["hypr/settings.conf", "chaque valeur : applis, clavier, écrans, espacements, bordures, polices, barre, dossier des fonds…"],
+            ["~/.local/state/inkpaw/toggles.conf", "ce que vous avez changé dans les Réglages — prime sur settings.conf"],
+            ["~/.local/state/inkpaw/theme.conf", "le dernier thème, rétabli à la connexion"],
+            ["hypr/conf/keybinds/*.lua", "les raccourcis (modificateur = MOD)"],
+            ["hypr/conf/custom.lua", "vos retouches Hyprland, chargées en dernier"]
+          ]],
+          ["h", "Le système de réglages"],
+          ["p", "La fenêtre Réglages et le menu rofi sont tous deux générés depuis <code>hypr/settings.schema</code>, une ligne par option :"],
+          ["code", "Page/Groupe | CLÉ | type | choix | libellé | apply\nBar/Layout | BAR_POSITION | choice | top,bottom | Position | bar"],
+          ["p", "<code>apply</code> indique quoi recharger : hypr, bar, theme, mode, scheme, skin, apps… Tout est aussi scriptable :"],
+          ["code", "hypr/scripts/menus/settings.sh set BAR_POSITION bottom\nhypr/scripts/menus/settings.sh unset BAR_POSITION"],
+          ["h", "Les modules Hyprland"],
+          ["p", "<code>hypr/hyprland.lua</code> ne contient que des lignes <code>require()</code>, une par sujet dans <code>hypr/conf/</code>. Commentez-en une pour couper un module ; <kbd>SUPER</kbd>+<kbd>CTRL</kbd>+<kbd>R</kbd> recharge."],
+          ["tip", "Pour afficher n'importe quelle autre clé de settings.conf dans les Réglages, ajoutez une ligne au schéma."]
+        ]
+      },
+      {
+        "id": "theming", "title": "Thèmes",
+        "lead": "Choisissez un fond, et matugen en tire une palette pour chaque appli — ou choisissez l'un des neuf thèmes fixes.",
+        "blocks": [
+          ["h", "Fonds d'écran et palettes"],
+          ["code", "hyprtheme/theme.sh wallpaper ~/Pictures/x.jpg\nhyprtheme/theme.sh static nord\nhyprtheme/theme.sh mode dark"],
+          ["table", ["Touches", "Action"], [
+            ["SUPER+CTRL+W", "sélecteur de fonds d'écran"],
+            ["CTRL+ALT+T", "sélecteur de thèmes fixes"],
+            ["SUPER+CTRL+T", "clair ↔ sombre"]
+          ]],
+          ["p", "<code>hyprtheme/generate-wallpapers.sh</code> dessine 15 fonds avec ImageMagick. Vos propres images vont dans le même dossier."],
+          ["h", "Ajouter une appli thémée"],
+          ["p", "Un fichier dans <code>hyprtheme/templates/</code> dont les premières lignes disent où il va : <code>@output: &lt;chemin&gt;</code>. Utilisez <code>{{colors.primary.default.hex}}</code>, <code>{{accent.a1}}</code>, <code>{{ansi.red}}</code>, <code>{{ui.font}}</code>… et ajoutez un hook pour recharger l'appli en direct."],
+          ["h", "Le style « encre »"],
+          ["p", "Réglages → Appearance → Interface style. Polices, applis et barre du haut passent en dessin à la main — panneaux parchemin, contours à l'encre, titres au pinceau et chats — tandis que couleurs, fond et fenêtres restent les vôtres."]
+        ]
+      },
+      {
+        "id": "bar", "title": "La barre",
+        "lead": "Waybar est générée à partir de quelques réglages : vous n'éditez jamais son JSON à la main.",
+        "blocks": [
+          ["table", ["Réglage", "Effet"], [
+            ["BAR_POSITION", "top / bottom (haut / bas)"],
+            ["BAR_LAYOUT", "center, split, left, right, custom"],
+            ["BAR_STYLE", "capsules, floating, solid, minimal, hyde, encre"],
+            ["BAR_SESSION …", "les modules de chaque capsule, dans l'ordre"],
+            ["BAR_WORKSPACES_STYLE", "points ou numéros"]
+          ]],
+          ["h", "Sous le capot"],
+          ["p", "Waybar change de bureau avec l'ancienne commande <code>dispatch workspace N</code>, qu'une config Lua refuse : <code>waybar/ipc-proxy.py</code> la réécrit en Lua. Chaque commande de clic est détachée avec <code>setsid</code>, pour qu'une appli ouverte depuis la barre survive à un changement de thème."],
+          ["code", "hypr/scripts/waybar.sh start|restart|reload|toggle|build"]
+        ]
+      },
+      {
+        "id": "apps", "title": "Applis",
+        "lead": "Spotlight, le panneau rapide, les notifications, l'assistant IA et les menus.",
+        "blocks": [
+          ["h", "Spotlight"],
+          ["p", "<kbd>SUPER</kbd>+<kbd>SPACE</kbd>. Une liste avec une section par type : calcul, applis, actions, fichiers, émojis, presse-papiers, web et cartes, commande. Les préfixes cherchent dans une seule section : <code>=</code> calcul, <code>/</code> fichiers, <code>.</code> émojis, <code>:</code> presse-papiers, <code>@</code> web, <code>&gt;</code> commande."],
+          ["h", "Panneau rapide"],
+          ["p", "Cliquez sur une icône de la barre : Wi-Fi, Bluetooth, son par appli, luminosité (DDC/CI pour les écrans externes, lumière nocturne), batterie et mode d'énergie, historique des notifications, calendrier, médias. Il reste en mémoire et s'ouvre donc instantanément."],
+          ["h", "Assistant IA"],
+          ["p", "<kbd>SUPER</kbd>+<kbd>I</kbd>. Une fenêtre qui se range à côté de vos fenêtres, avec des conversations (<kbd>Ctrl</kbd>+<kbd>O</kbd>, <kbd>Ctrl</kbd>+<kbd>N</kbd>), du Markdown en direct et des boutons Copier. Claude par défaut ; OpenAI, Ollama, OpenRouter ou tout point d'accès compatible dans les Réglages."],
+          ["tip", "Les clés d'API sont rangées dans <code>~/.local/state/inkpaw/secrets.conf</code> (droits 600), jamais dans le repo."]
+        ]
+      },
+      {
+        "id": "keybindings", "title": "Raccourcis",
+        "lead": "MOD vaut SUPER. La liste interactive est SUPER+CTRL+K — générée à partir de la description de chaque raccourci.",
+        "blocks": [
+          ["table", ["Touches", "Action"], [
+            ["SUPER+RETURN", "terminal"],
+            ["SUPER+SPACE", "Spotlight"],
+            ["SUPER+Q", "fermer la fenêtre"],
+            ["SUPER+1…0", "aller au bureau 1–10 (AZERTY : la rangée des chiffres)"],
+            ["SUPER+CTRL+S", "Réglages"],
+            ["SUPER+I", "assistant IA"],
+            ["SUPER+N", "notifications"],
+            ["SUPER+CTRL+W / CTRL+ALT+T", "sélecteur de fonds / de thèmes"],
+            ["SUPER+CTRL+P", "menu d'arrêt"],
+            ["PRINT / SUPER+ALT+E", "capturer une zone et l'annoter"]
+          ]]
+        ]
+      },
+      {
+        "id": "development", "title": "Développement",
+        "lead": "Un sujet par fichier, chaque valeur dans settings.conf, les fichiers générés jamais commités.",
+        "blocks": [
+          ["code", "./test.sh deps            # paquets manquants + la commande d'installation\n./test.sh verify          # chaque profil d'écran, chaque fichier, chaque thème\n./test.sh nested          # tout le bureau dans une fenêtre imbriquée"],
+          ["table", ["Pour ajouter…", "Faites"], [
+            ["un réglage", "une ligne dans settings.conf + une dans settings.schema"],
+            ["une appli thémée", "un modèle dans hyprtheme/templates/"],
+            ["un thème fixe", "un fichier JSON dans hyprtheme/static/"],
+            ["un raccourci", "une ligne avec une description dans hypr/conf/keybinds/"],
+            ["un profil d'écran", "un fichier dans hypr/monitors/"]
+          ]],
+          ["tip", "<code>./test.sh verify</code> doit passer avant chaque commit — il tourne dans une copie jetable, jamais dans votre config."]
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "about": "Un bureau Hyprland modulaire. Les chats, le logo et les fonds d'écran sont dessinés par le code du repo ; polices sous licence SIL Open Font License.",
+    "project": "Projet",
+    "docs": "Documentation",
+    "credits": "Construit sur Hyprland, Waybar, matugen, Walker et SwayNotificationCenter."
+  }
+}

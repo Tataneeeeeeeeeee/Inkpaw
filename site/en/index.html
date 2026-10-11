@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inkpaw — a Hyprland desktop drawn in ink</title>
+<meta name="description" content="Inkpaw is a complete, modular Hyprland 0.56 desktop in Lua: themed from your wallpaper, configured from one Settings app, with a hand-drawn ink and parchment style.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f1e7cf" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1f1a16" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Inkpaw — a Hyprland desktop drawn in ink">
+<meta property="og:description" content="Inkpaw is a complete, modular Hyprland 0.56 desktop in Lua: themed from your wallpaper, configured from one Settings app, with a hand-drawn ink and parchment style.">
+<meta property="og:image" content="../assets/img/desktop.webp">
+<meta property="og:locale" content="en_US">
+<link rel="alternate" hreflang="en" href="../en/index.html"><link rel="alternate" hreflang="fr" href="../fr/index.html">
+<link rel="alternate" hreflang="x-default" href="../en/index.html">
+<link rel="icon" type="image/png" href="../assets/img/inkpaw-mark-32.png">
+<script>(function(){try{var t=localStorage.getItem("inkpaw-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Shantell+Sans:wght@400;500;600;700;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="wrap site-nav" aria-label="Main">
+    <a class="brand" href="index.html"><img src="../assets/img/inkpaw-mark-128.png" alt="" width="40" height="40"><span>Inkpaw</span></a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="screenshots.html">Screenshots</a>
+      <a href="install.html">Install</a>
+      <a href="docs.html">Docs</a>
+    </div>
+    <div class="nav-tools">
+      <a class="icon-btn" href="../fr/index.html" hreflang="fr" lang="fr" aria-label="Lire en français"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>FR</a>
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch light / dark"><svg class="sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2 6 6M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg><svg class="moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></button>
+      <a class="icon-btn" href="https://github.com/Tataneeeeeeeeeee/Inkpaw"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.4 6.4-1.5 6.4-6.9A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.7 16 2.5a13.4 13.4 0 0 0-7 0C6.3.7 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.3 6.5 6.4 6.9a3.4 3.4 0 0 0-.9 2.6V22"/></svg><span>GitHub</span></a>
+    </div>
+  </nav>
+</header>
+<main id="main">
+  <section class="wrap hero">
+    <div class="hero-text">
+      <span class="tag">HYPRLAND 0.56 · LUA · ARCH</span>
+      <h1 class="display">A desktop drawn in ink.</h1>
+      <p>Inkpaw is a complete, modular Hyprland setup: bar, launcher, menus, quick panel, lock screen and an AI assistant — themed from your wallpaper and configured from one Settings app.</p>
+      <div class="actions">
+        <a class="btn btn-ink" href="install.html">Install Inkpaw</a>
+        <a class="btn btn-paper" href="screenshots.html">See it in action</a>
+      </div>
+    </div>
+    <div class="hero-logo">
+      <img class="only-light" src="../assets/img/inkpaw-signature-600.png" alt="Inkpaw logo: an ochre cat asleep above the name" width="600" height="520">
+      <img class="only-dark" src="../assets/img/inkpaw-signature-dark-600.png" alt="Inkpaw logo: an ochre cat asleep above the name" width="600" height="520">
+    </div>
+  </section>
+
+  <section class="wrap" aria-label="One line">
+    <div class="cmd"><h2 class="display">One line</h2><code><span class="prompt">$</span> curl -fsSL https://raw.githubusercontent.com/Tataneeeeeeeeeee/Inkpaw/main/install.sh | bash</code><button class="copy" type="button" data-copy="curl -fsSL https://raw.githubusercontent.com/Tataneeeeeeeeeee/Inkpaw/main/install.sh | bash" data-copied="Copied!">Copy</button><img class="cat" src="../assets/img/peek-gribouille.png" alt="" width="92"></div>
+    <p class="note">Asks before every step. Never touches <code>~/.config</code>: Inkpaw is its own login session. <a href="install.html"><strong>Options &amp; manual install →</strong></a></p>
+  </section>
+
+  <section class="wrap section" style="padding-bottom: 0">
+    <figure class="card shot">
+      <img class="only-light" src="../assets/img/desktop.webp" alt="The Inkpaw desktop in the encre style: three tiled terminals under the parchment bar" width="1920" height="1080">
+      <img class="only-dark" src="../assets/img/night-theme.webp" alt="The same desktop in night mode" width="1920" height="1080">
+      <figcaption>The “encre” style on the ink-hills wallpaper drawn by the project — in light or night mode.</figcaption>
+    </figure>
+  </section>
+
+  <section id="features" class="wrap section" aria-labelledby="feat-title">
+    <div class="section-head"><h2 id="feat-title" class="display">Everything, in one box</h2><p>Each part is a module you can switch off, every file is commented, and every value lives in <code>hypr/settings.conf</code>.</p></div>
+    <div class="grid"><article class="card feature"><header><span class="num tint-ochre">01</span>
+<h3 class="display">Wallpaper → palette</h3></header><p>Pick a wallpaper and everything follows: borders, bar, menus, notifications, terminal, GTK apps and Firefox. Nine static themes, light and dark.</p></article><article class="card feature"><header><span class="num tint-moss">02</span>
+<h3 class="display">One Settings app</h3></header><p>A GTK 4 window for every option — bar layout, fonts, gaps, monitors, keyboard, default apps, AI provider. Live, with a reset on every row.</p></article><article class="card feature"><header><span class="num tint-brick">03</span>
+<h3 class="display">Spotlight search</h3></header><p>Apps, calculator, files, emoji, clipboard, web and maps, desktop actions — one list with a titled section for each.</p></article><article class="card feature"><header><span class="num tint-sky">04</span>
+<h3 class="display">Quick panel</h3></header><p>Wi-Fi, Bluetooth, sound per app, brightness with DDC/CI, battery and power mode, notifications, calendar, media — instant drop-downs.</p></article><article class="card feature"><header><span class="num tint-ochre">05</span>
+<h3 class="display">AI assistant</h3></header><p>A side window that docks beside your tiled windows. Conversations, full Markdown, Claude or any OpenAI-compatible API.</p></article><article class="card feature"><header><span class="num tint-moss">06</span>
+<h3 class="display">Tested, modular</h3></header><p>One concern per file, a module per line. <code>./test.sh verify</code> checks every monitor profile and renders every theme in a throw-away copy.</p></article></div>
+  </section>
+
+  <section class="band" aria-labelledby="how-title">
+    <div class="wrap">
+      <div class="text"><h2 id="how-title" class="display">Your config stays yours</h2><p>Inkpaw installs as a second session in your login screen. At every login it builds its own config root — links to the repo for its apps, links to your real <code>~/.config</code> for everything else — and starts Hyprland on it.</p><p>Your browser, editor and chat apps keep their settings. Your usual session is untouched. Remove one desktop file and Inkpaw is gone.</p></div>
+      <ol class="steps"><li class="card"><span class="n">1</span><div><strong>Run the installer</strong><span>It clones the repo, installs the missing packages and draws the wallpapers — asking first.</span></div></li><li class="card"><span class="n">2</span><div><strong>Pick “Hyprland — Inkpaw”</strong><span>Log out and choose the new session in your login screen. A welcome window opens.</span></div></li><li class="card"><span class="n">3</span><div><strong>Make it yours</strong><span><kbd>SUPER</kbd>+<kbd>CTRL</kbd>+<kbd>S</kbd> for Settings, <kbd>SUPER</kbd>+<kbd>CTRL</kbd>+<kbd>K</kbd> for every shortcut. Your edits to the repo are live.</span></div></li></ol>
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="gal-title">
+    <div class="section-head"><h2 id="gal-title" class="display">A look around</h2><a href="screenshots.html"><strong>All screenshots →</strong></a></div>
+    <div class="tiles"><figure class="card tile"><img src="../assets/img/spotlight.webp" alt="Spotlight search with a cat peeking over the panel" loading="lazy" width="1920" height="1080"><figcaption><strong>Spotlight</strong><span>Apps, calculator, web, emoji and actions in one list.</span></figcaption></figure><figure class="card tile"><img src="../assets/img/ai-assistant.webp" alt="AI assistant docked beside tiled terminals" loading="lazy" width="1920" height="1080"><figcaption><strong>AI assistant</strong><span>Docks beside your windows; full Markdown answers.</span></figcaption></figure><figure class="card tile"><img src="../assets/img/power-menu.webp" alt="Power menu with one cat per action" loading="lazy" width="1920" height="1080"><figcaption><strong>Power menu</strong><span>One cat per action, keyboard or mouse.</span></figcaption></figure><figure class="card tile"><img src="../assets/img/themes.webp" alt="Theme selector showing mini desktops" loading="lazy" width="1920" height="1080"><figcaption><strong>Themes</strong><span>A mini desktop in each theme’s colors.</span></figcaption></figure></div>
+  </section>
+
+  <section class="wrap" style="padding-bottom: 90px" aria-labelledby="duo-title">
+    <div class="card duo">
+      <div><h2 id="duo-title" class="display">Day or night, glass or ink</h2><p>Flip light and dark with <kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>T</kbd>. Prefer a quieter look? Switch the interface style back to the soft-glass default in Settings — your colors, wallpaper and windows stay as they are.</p><div class="pills"><span class="pill tint-ochre">9 static themes</span><span class="pill tint-moss">15 drawn wallpapers</span><span class="pill tint-brick">any wallpaper → a palette</span></div></div>
+      <div class="pics"><img src="../assets/img/night-theme.webp" alt="The same desktop in night mode" loading="lazy" width="1920" height="1080"></div>
+    </div>
+  </section>
+</main>
+<footer class="site-footer">
+  <img class="basket" src="../assets/img/basket.png" alt="" width="150">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <div class="row"><img src="../assets/img/inkpaw-mark-flat-256.png" alt="" width="64"><span>Inkpaw</span></div>
+      <p>A modular Hyprland desktop. Cats, logo and wallpapers are drawn by the code of the repo; fonts under the SIL Open Font License.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <div><strong>Project</strong><a href="install.html">Install</a><a href="screenshots.html">Screenshots</a><a href="https://github.com/Tataneeeeeeeeeee/Inkpaw">GitHub</a></div>
+      <div><strong>Docs</strong><a href="docs.html#configuration">Configuration</a><a href="docs.html#theming">Theming</a><a href="docs.html#bar">The bar</a></div>
+    </nav>
+  </div>
+  <div class="footer-bottom">Built on Hyprland, Waybar, matugen, Walker and SwayNotificationCenter.</div>
+</footer>
+</body>
+</html>

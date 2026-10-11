@@ -1,0 +1,261 @@
+{
+  "lang": "en",
+  "locale": "en_US",
+  "other": "fr",
+  "other_label": "Français",
+  "other_short": "FR",
+  "nav": {
+    "skip": "Skip to content",
+    "features": "Features",
+    "screenshots": "Screenshots",
+    "install": "Install",
+    "docs": "Docs",
+    "github": "GitHub",
+    "theme": "Switch light / dark",
+    "language": "Lire en français",
+    "copy": "Copy",
+    "copied": "Copied!"
+  },
+  "meta": {
+    "home": ["Inkpaw — a Hyprland desktop drawn in ink", "Inkpaw is a complete, modular Hyprland 0.56 desktop in Lua: themed from your wallpaper, configured from one Settings app, with a hand-drawn ink and parchment style."],
+    "install": ["Install Inkpaw — one line", "Install Inkpaw on Arch Linux with one command. It adds a login session next to your usual one and never writes to ~/.config."],
+    "screenshots": ["Inkpaw — screenshots", "Every screen of Inkpaw: desktop, Spotlight, quick panel, AI assistant, Settings, selectors, cheat sheet, power menu, lock screen."],
+    "docs": ["Inkpaw — documentation", "How Inkpaw works: installation, configuration, theming, the bar, the apps, keybindings and development."]
+  },
+  "home": {
+    "tag": "HYPRLAND 0.56 · LUA · ARCH",
+    "title": "A desktop drawn in ink.",
+    "lead": "Inkpaw is a complete, modular Hyprland setup: bar, launcher, menus, quick panel, lock screen and an AI assistant — themed from your wallpaper and configured from one Settings app.",
+    "cta_install": "Install Inkpaw",
+    "cta_shots": "See it in action",
+    "logo_alt": "Inkpaw logo: an ochre cat asleep above the name",
+    "oneline": "One line",
+    "oneline_note": "Asks before every step. Never touches <code>~/.config</code>: Inkpaw is its own login session.",
+    "oneline_more": "Options &amp; manual install →",
+    "hero_alt": "The Inkpaw desktop in the encre style: three tiled terminals under the parchment bar",
+    "hero_alt_dark": "The same desktop in night mode",
+    "hero_caption": "The “encre” style on the ink-hills wallpaper drawn by the project — in light or night mode.",
+    "features_title": "Everything, in one box",
+    "features_lead": "Each part is a module you can switch off, every file is commented, and every value lives in <code>hypr/settings.conf</code>.",
+    "features": [
+      ["ochre", "Wallpaper → palette", "Pick a wallpaper and everything follows: borders, bar, menus, notifications, terminal, GTK apps and Firefox. Nine static themes, light and dark."],
+      ["moss", "One Settings app", "A GTK 4 window for every option — bar layout, fonts, gaps, monitors, keyboard, default apps, AI provider. Live, with a reset on every row."],
+      ["brick", "Spotlight search", "Apps, calculator, files, emoji, clipboard, web and maps, desktop actions — one list with a titled section for each."],
+      ["sky", "Quick panel", "Wi-Fi, Bluetooth, sound per app, brightness with DDC/CI, battery and power mode, notifications, calendar, media — instant drop-downs."],
+      ["ochre", "AI assistant", "A side window that docks beside your tiled windows. Conversations, full Markdown, Claude or any OpenAI-compatible API."],
+      ["moss", "Tested, modular", "One concern per file, a module per line. <code>./test.sh verify</code> checks every monitor profile and renders every theme in a throw-away copy."]
+    ],
+    "how_title": "Your config stays yours",
+    "how_p1": "Inkpaw installs as a second session in your login screen. At every login it builds its own config root — links to the repo for its apps, links to your real <code>~/.config</code> for everything else — and starts Hyprland on it.",
+    "how_p2": "Your browser, editor and chat apps keep their settings. Your usual session is untouched. Remove one desktop file and Inkpaw is gone.",
+    "how_steps": [
+      ["Run the installer", "It clones the repo, installs the missing packages and draws the wallpapers — asking first."],
+      ["Pick “Hyprland — Inkpaw”", "Log out and choose the new session in your login screen. A welcome window opens."],
+      ["Make it yours", "<kbd>SUPER</kbd>+<kbd>CTRL</kbd>+<kbd>S</kbd> for Settings, <kbd>SUPER</kbd>+<kbd>CTRL</kbd>+<kbd>K</kbd> for every shortcut. Your edits to the repo are live."]
+    ],
+    "gallery_title": "A look around",
+    "gallery_all": "All screenshots →",
+    "gallery": ["spotlight", "ai-assistant", "power-menu", "themes"],
+    "duo_title": "Day or night, glass or ink",
+    "duo_text": "Flip light and dark with <kbd>SUPER</kbd> + <kbd>CTRL</kbd> + <kbd>T</kbd>. Prefer a quieter look? Switch the interface style back to the soft-glass default in Settings — your colors, wallpaper and windows stay as they are.",
+    "duo_pills": ["9 static themes", "15 drawn wallpapers", "any wallpaper → a palette"]
+  },
+  "shots": {
+    "title": "A look around",
+    "lead": "Every screen of the “encre” style, in light mode, on the ink-hills wallpaper. Pick one to see it large.",
+    "filters_label": "Filter screenshots",
+    "filters": [["all", "All"], ["desktop", "Desktop"], ["apps", "Apps"], ["menus", "Menus"]],
+    "show": "Show",
+    "aside_title": "Not into ink?",
+    "aside_text": "The same apps come in a soft-glass default look too — switch the interface style in Settings → Appearance. Colors follow your wallpaper either way.",
+    "items": {
+      "desktop": ["Desktop", "", "Tiled terminals under the parchment bar.", "Inkpaw desktop with three tiled terminals"],
+      "night-theme": ["Night mode", "SUPER+CTRL+T", "The same desktop after a light ↔ dark switch.", "The desktop in night mode"],
+      "spotlight": ["Spotlight", "SUPER+SPACE", "Apps, calculator, web, emoji and actions in one list.", "Spotlight search with a cat peeking over the panel"],
+      "quick-panel": ["Quick panel", "", "Calendar, sound, battery and notifications, from the bar icons.", "Quick panel sections"],
+      "ai-assistant": ["AI assistant", "SUPER+I", "Docks beside your windows; full Markdown answers.", "AI assistant docked beside tiled terminals"],
+      "settings": ["Settings", "SUPER+CTRL+S", "Every option, applied live.", "Settings window, Appearance page"],
+      "wallpapers": ["Wallpapers", "SUPER+CTRL+W", "Taped photos on a torn parchment band.", "Wallpaper selector"],
+      "themes": ["Themes", "CTRL+ALT+T", "A mini desktop in each theme’s colors.", "Theme selector showing mini desktops"],
+      "keybindings": ["Cheat sheet", "SUPER+CTRL+K", "Every shortcut by category, with a filter.", "Keybindings cheat sheet"],
+      "power-menu": ["Power menu", "SUPER+CTRL+P", "One cat per action, keyboard or mouse.", "Power menu with one cat per action"],
+      "lock-screen": ["Lock screen", "SUPER+L", "Brush clock and a cat on the password card.", "Lock screen"]
+    }
+  },
+  "install": {
+    "title": "Install in one line",
+    "lead": "On Arch Linux or an Arch-based distribution with Hyprland 0.56 or newer. Inkpaw adds a session next to your usual one and never writes to <code>~/.config</code>.",
+    "cmd_title": "The command",
+    "cmd_note": "Want to read it first? <code>git clone</code> the repo and run <code>./install.sh</code> from it — same steps.",
+    "steps_title": "What it does — asking each time",
+    "steps": [
+      ["Gets the files", "Clones Inkpaw into <code>~/.local/share/inkpaw/repo</code>, or updates it."],
+      ["Installs what is missing", "Hyprland, Waybar, swaync, matugen, Walker… with <code>yay</code> or <code>paru</code>."],
+      ["Uses your keyboard", "Keeps your system layout (<code>localectl</code>) as your setting."],
+      ["Draws the wallpapers", "15 procedural wallpapers into <code>~/Pictures/wallpapers</code>, about a minute."],
+      ["Adds the session", "“Hyprland — Inkpaw” in your login screen, with <code>sudo</code>."]
+    ],
+    "opt_title": "Options",
+    "opt_note": "Passed after <code>bash -s --</code> when piped, e.g. <code>… | bash -s -- --yes --sddm-theme</code>",
+    "opt_head": ["Option", "Effect"],
+    "options": [
+      ["--yes", "answer yes to every question"],
+      ["--sddm-theme", "also install the hand-drawn SDDM login screen"],
+      ["--no-deps", "do not install packages"],
+      ["--no-wallpapers", "do not draw the wallpapers"],
+      ["--no-session", "do not add the login session — no sudo at all"],
+      ["--dir DIR", "clone somewhere else"],
+      ["--branch NAME", "use another branch"]
+    ],
+    "manual_title": "By hand",
+    "manual_c1": "# get it",
+    "manual_c2": "# check, then add the session",
+    "needs_title": "You need",
+    "needs": [
+      "Arch Linux, or a distribution based on it",
+      "Hyprland 0.56+ (Lua config)",
+      "a login screen that reads Wayland sessions — SDDM, GDM, ly…",
+      "<code>yay</code> or <code>paru</code> for the AUR packages (Walker, Elephant)"
+    ],
+    "needs_note": "<code>./test.sh deps</code> lists what is missing and prints the exact install command.",
+    "un_title": "Changed your mind?",
+    "un_text": "Remove the session and Inkpaw's own folders. Your <code>~/.config</code> was never modified.",
+    "next": "Next: read the docs →"
+  },
+  "docs": {
+    "title": "Documentation",
+    "nav_title": "Guides",
+    "edit": "Edit these docs on GitHub →",
+    "crumb": "DOCS",
+    "guides": [
+      {
+        "id": "installation", "title": "Installation",
+        "lead": "One line on Arch Linux, a login session next to your usual one, nothing written to ~/.config.",
+        "blocks": [
+          ["h", "One-line install"],
+          ["code", "curl -fsSL https://raw.githubusercontent.com/Tataneeeeeeeeeee/Inkpaw/main/install.sh | bash"],
+          ["p", "The installer asks before every step that installs something or needs <code>sudo</code>: files, packages, keyboard layout, wallpapers, login session. See the <a href=\"install.html\">install page</a> for its options."],
+          ["h", "How the login session works"],
+          ["p", "At every login <code>session/start.sh</code> rebuilds <code>~/.local/share/inkpaw/session-root</code>: links to the repo for Inkpaw’s folders, links to your real <code>~/.config</code> for everything else. It then sets <code>XDG_CONFIG_HOME</code> to it and starts Hyprland."],
+          ["p", "Inkpaw’s own state lives in <code>~/.local/state/inkpaw</code> (your settings, last theme, conversations, notification history) and <code>~/.cache/inkpaw</code>."],
+          ["h", "Troubleshooting"],
+          ["table", ["Problem", "Fix"], [
+            ["session does not start", "pick your usual session, read <code>~/.local/share/inkpaw/session.log</code>, run <code>./test.sh verify</code>"],
+            ["something is missing", "<code>./test.sh deps</code>"],
+            ["notifications ignore the theme", "<code>hypr/scripts/notifications.sh restart</code> (another daemon took over)"],
+            ["wrong keyboard layout", "Settings → Displays → Keyboard &amp; mouse"]
+          ]],
+          ["tip", "Updating is a <code>git pull</code> in the repo (or running the installer again). Your settings live outside the repo and survive updates."]
+        ]
+      },
+      {
+        "id": "configuration", "title": "Configuration",
+        "lead": "Every value lives in one file, every change in Settings is a line of state — your defaults are never rewritten.",
+        "blocks": [
+          ["h", "Where values live"],
+          ["table", ["File", "What"], [
+            ["hypr/settings.conf", "every user value: apps, keyboard, monitors, gaps, borders, fonts, bar, wallpaper folder…"],
+            ["~/.local/state/inkpaw/toggles.conf", "what you changed in Settings — overrides settings.conf"],
+            ["~/.local/state/inkpaw/theme.conf", "the last theme, restored at login"],
+            ["hypr/conf/keybinds/*.lua", "keybindings (modifier = MOD)"],
+            ["hypr/conf/custom.lua", "personal Hyprland tweaks, loaded last"]
+          ]],
+          ["h", "The settings system"],
+          ["p", "The Settings window and the rofi menu are both generated from <code>hypr/settings.schema</code>, one line per option:"],
+          ["code", "Page/Group | KEY | type | choices | label | apply\nBar/Layout | BAR_POSITION | choice | top,bottom | Position | bar"],
+          ["p", "<code>apply</code> says what to reload: hypr, bar, theme, mode, scheme, skin, apps… Everything is also scriptable:"],
+          ["code", "hypr/scripts/menus/settings.sh set BAR_POSITION bottom\nhypr/scripts/menus/settings.sh unset BAR_POSITION"],
+          ["h", "Hyprland modules"],
+          ["p", "<code>hypr/hyprland.lua</code> only contains <code>require()</code> lines, one per concern in <code>hypr/conf/</code>. Comment one to switch a module off; press <kbd>SUPER</kbd>+<kbd>CTRL</kbd>+<kbd>R</kbd> to reload."],
+          ["tip", "To expose any other settings.conf key in Settings, add one line to the schema."]
+        ]
+      },
+      {
+        "id": "theming", "title": "Theming",
+        "lead": "Pick a wallpaper, and matugen turns it into a palette for every app — or pick one of nine static themes.",
+        "blocks": [
+          ["h", "Wallpapers and palettes"],
+          ["code", "hyprtheme/theme.sh wallpaper ~/Pictures/x.jpg\nhyprtheme/theme.sh static nord\nhyprtheme/theme.sh mode dark"],
+          ["table", ["Keys", "Action"], [
+            ["SUPER+CTRL+W", "wallpaper selector"],
+            ["CTRL+ALT+T", "static theme selector"],
+            ["SUPER+CTRL+T", "light ↔ dark"]
+          ]],
+          ["p", "<code>hyprtheme/generate-wallpapers.sh</code> draws 15 procedural wallpapers with ImageMagick. Your own images go in the same folder."],
+          ["h", "Adding a themed app"],
+          ["p", "One file in <code>hyprtheme/templates/</code> whose first lines say where it goes: <code>@output: &lt;path&gt;</code>. Use <code>{{colors.primary.default.hex}}</code>, <code>{{accent.a1}}</code>, <code>{{ansi.red}}</code>, <code>{{ui.font}}</code>… and add a hook to live-reload the app."],
+          ["h", "The “encre” style"],
+          ["p", "Settings → Appearance → Interface style. Fonts, apps and the top bar turn hand-drawn — parchment panels, ink outlines, brush titles and cats — while colors, wallpaper and windows stay yours."]
+        ]
+      },
+      {
+        "id": "bar", "title": "The bar",
+        "lead": "Waybar is generated from a few settings: you never edit its JSON by hand.",
+        "blocks": [
+          ["table", ["Setting", "What it does"], [
+            ["BAR_POSITION", "top / bottom"],
+            ["BAR_LAYOUT", "center, split, left, right, custom"],
+            ["BAR_STYLE", "capsules, floating, solid, minimal, hyde, encre"],
+            ["BAR_SESSION …", "the ordered modules of each capsule"],
+            ["BAR_WORKSPACES_STYLE", "dots or numbers"]
+          ]],
+          ["h", "Under the hood"],
+          ["p", "Waybar switches workspace with the legacy <code>dispatch workspace N</code>, which a Lua config rejects: <code>waybar/ipc-proxy.py</code> rewrites it into Lua. Every click command is detached with <code>setsid</code>, so an app opened from the bar survives a theme change."],
+          ["code", "hypr/scripts/waybar.sh start|restart|reload|toggle|build"]
+        ]
+      },
+      {
+        "id": "apps", "title": "Apps",
+        "lead": "Spotlight, the quick panel, notifications, the AI assistant and the menus.",
+        "blocks": [
+          ["h", "Spotlight"],
+          ["p", "<kbd>SUPER</kbd>+<kbd>SPACE</kbd>. One list with a section per kind: calculator, apps, actions, files, emoji, clipboard, web and maps, command. Prefixes search one section: <code>=</code> calc, <code>/</code> files, <code>.</code> emoji, <code>:</code> clipboard, <code>@</code> web, <code>&gt;</code> run."],
+          ["h", "Quick panel"],
+          ["p", "Click an icon of the bar: Wi-Fi, Bluetooth, sound per app, brightness (DDC/CI for external screens, night light), battery and power mode, notifications history, calendar, media. It stays in memory, so it opens at once."],
+          ["h", "AI assistant"],
+          ["p", "<kbd>SUPER</kbd>+<kbd>I</kbd>. A window that docks beside your tiled windows, with conversations (<kbd>Ctrl</kbd>+<kbd>O</kbd>, <kbd>Ctrl</kbd>+<kbd>N</kbd>), streaming Markdown and Copy buttons. Claude by default; OpenAI, Ollama, OpenRouter or any compatible endpoint in Settings."],
+          ["tip", "API keys are stored in <code>~/.local/state/inkpaw/secrets.conf</code> (mode 600), never in the repo."]
+        ]
+      },
+      {
+        "id": "keybindings", "title": "Keybindings",
+        "lead": "MOD is SUPER. The live, searchable list is SUPER+CTRL+K — generated from every bind’s description.",
+        "blocks": [
+          ["table", ["Keys", "Action"], [
+            ["SUPER+RETURN", "terminal"],
+            ["SUPER+SPACE", "Spotlight"],
+            ["SUPER+Q", "close the window"],
+            ["SUPER+1…0", "go to workspace 1–10 (AZERTY: the number row)"],
+            ["SUPER+CTRL+S", "Settings"],
+            ["SUPER+I", "AI assistant"],
+            ["SUPER+N", "notifications"],
+            ["SUPER+CTRL+W / CTRL+ALT+T", "wallpaper / theme selector"],
+            ["SUPER+CTRL+P", "power menu"],
+            ["PRINT / SUPER+ALT+E", "screenshot an area and annotate it"]
+          ]]
+        ]
+      },
+      {
+        "id": "development", "title": "Development",
+        "lead": "One concern per file, every value in settings.conf, generated files never committed.",
+        "blocks": [
+          ["code", "./test.sh deps            # missing packages + the install command\n./test.sh verify          # every monitor profile, every file, every theme\n./test.sh nested          # the whole desktop in a nested window"],
+          ["table", ["To add…", "Do"], [
+            ["a setting", "a line in settings.conf + one in settings.schema"],
+            ["a themed app", "a template in hyprtheme/templates/"],
+            ["a static theme", "a JSON file in hyprtheme/static/"],
+            ["a keybind", "a line with a description in hypr/conf/keybinds/"],
+            ["a monitor profile", "a file in hypr/monitors/"]
+          ]],
+          ["tip", "<code>./test.sh verify</code> must pass before every commit — it runs in a throw-away copy, never in your config."]
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "about": "A modular Hyprland desktop. Cats, logo and wallpapers are drawn by the code of the repo; fonts under the SIL Open Font License.",
+    "project": "Project",
+    "docs": "Docs",
+    "credits": "Built on Hyprland, Waybar, matugen, Walker and SwayNotificationCenter."
+  }
+}

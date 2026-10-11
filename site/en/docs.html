@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inkpaw — documentation</title>
+<meta name="description" content="How Inkpaw works: installation, configuration, theming, the bar, the apps, keybindings and development.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f1e7cf" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1f1a16" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Inkpaw — documentation">
+<meta property="og:description" content="How Inkpaw works: installation, configuration, theming, the bar, the apps, keybindings and development.">
+<meta property="og:image" content="../assets/img/desktop.webp">
+<meta property="og:locale" content="en_US">
+<link rel="alternate" hreflang="en" href="../en/docs.html"><link rel="alternate" hreflang="fr" href="../fr/docs.html">
+<link rel="alternate" hreflang="x-default" href="../en/docs.html">
+<link rel="icon" type="image/png" href="../assets/img/inkpaw-mark-32.png">
+<script>(function(){try{var t=localStorage.getItem("inkpaw-theme");if(t==="dark"||t==="light")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Shantell+Sans:wght@400;500;600;700;800&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script src="../assets/js/site.js" defer></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <nav class="wrap site-nav" aria-label="Main">
+    <a class="brand" href="index.html"><img src="../assets/img/inkpaw-mark-128.png" alt="" width="40" height="40"><span>Inkpaw</span></a>
+    <div class="nav-links">
+      <a href="index.html#features">Features</a>
+      <a href="screenshots.html">Screenshots</a>
+      <a href="install.html">Install</a>
+      <a href="docs.html" aria-current="page">Docs</a>
+    </div>
+    <div class="nav-tools">
+      <a class="icon-btn" href="../fr/docs.html" hreflang="fr" lang="fr" aria-label="Lire en français"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3Z"/></svg>FR</a>
+      <button class="icon-btn theme-toggle" type="button" data-theme-toggle aria-label="Switch light / dark"><svg class="sun" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2 6 6M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg><svg class="moon" aria-hidden="true" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></button>
+      <a class="icon-btn" href="https://github.com/Tataneeeeeeeeeee/Inkpaw"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.9a3.4 3.4 0 0 0-.9-2.6c3.1-.4 6.4-1.5 6.4-6.9A5.4 5.4 0 0 0 20 4.8 5 5 0 0 0 19.9 1S18.7.7 16 2.5a13.4 13.4 0 0 0-7 0C6.3.7 5.1 1 5.1 1A5 5 0 0 0 5 4.8a5.4 5.4 0 0 0-1.5 3.7c0 5.4 3.3 6.5 6.4 6.9a3.4 3.4 0 0 0-.9 2.6V22"/></svg><span>GitHub</span></a>
+    </div>
+  </nav>
+</header>
+<div class="wrap docs" style="max-width: 1240px">
+  <nav class="card docs-nav" aria-label="Documentation">
+    <img class="paw" src="../assets/img/paw-croquette.png" alt="" width="70">
+    <span class="title">Guides</span>
+    <a href="#installation" class="active"><span class="n">01</span>Installation</a><a href="#configuration"><span class="n">02</span>Configuration</a><a href="#theming"><span class="n">03</span>Theming</a><a href="#bar"><span class="n">04</span>The bar</a><a href="#apps"><span class="n">05</span>Apps</a><a href="#keybindings"><span class="n">06</span>Keybindings</a><a href="#development"><span class="n">07</span>Development</a>
+    <a href="https://github.com/Tataneeeeeeeeeee/Inkpaw/tree/main/docs" style="margin-top: 6px; font-size: 14.5px">Edit these docs on GitHub →</a>
+  </nav>
+  <main id="main" class="docs-main">
+    <h1 class="sr-only">Documentation</h1>
+    <section class="doc" id="installation" aria-labelledby="installation-t">
+  <span class="crumb">DOCS / INSTALLATION</span>
+  <h2 id="installation-t" class="display">Installation</h2>
+  <p class="lead">One line on Arch Linux, a login session next to your usual one, nothing written to ~/.config.</p>
+  <h3>One-line install</h3><pre>curl -fsSL https://raw.githubusercontent.com/Tataneeeeeeeeeee/Inkpaw/main/install.sh | bash</pre><p>The installer asks before every step that installs something or needs <code>sudo</code>: files, packages, keyboard layout, wallpapers, login session. See the <a href="install.html">install page</a> for its options.</p><h3>How the login session works</h3><p>At every login <code>session/start.sh</code> rebuilds <code>~/.local/share/inkpaw/session-root</code>: links to the repo for Inkpaw’s folders, links to your real <code>~/.config</code> for everything else. It then sets <code>XDG_CONFIG_HOME</code> to it and starts Hyprland.</p><p>Inkpaw’s own state lives in <code>~/.local/state/inkpaw</code> (your settings, last theme, conversations, notification history) and <code>~/.cache/inkpaw</code>.</p><h3>Troubleshooting</h3><div class="card table-box"><table><thead><tr><th scope="col">Problem</th><th scope="col">Fix</th></tr></thead><tbody><tr><td><code>session does not start</code></td><td>pick your usual session, read <code>~/.local/share/inkpaw/session.log</code>, run <code>./test.sh verify</code></td></tr><tr><td><code>something is missing</code></td><td><code>./test.sh deps</code></td></tr><tr><td><code>notifications ignore the theme</code></td><td><code>hypr/scripts/notifications.sh restart</code> (another daemon took over)</td></tr><tr><td><code>wrong keyboard layout</code></td><td>Settings → Displays → Keyboard &amp; mouse</td></tr></tbody></table></div><aside class="tip"><img src="../assets/img/peek-gribouille.png" alt="" width="56"><p>Updating is a <code>git pull</code> in the repo (or running the installer again). Your settings live outside the repo and survive updates.</p></aside>
+</section><section class="doc" id="configuration" aria-labelledby="configuration-t">
+  <span class="crumb">DOCS / CONFIGURATION</span>
+  <h2 id="configuration-t" class="display">Configuration</h2>
+  <p class="lead">Every value lives in one file, every change in Settings is a line of state — your defaults are never rewritten.</p>
+  <h3>Where values live</h3><div class="card table-box"><table><thead><tr><th scope="col">File</th><th scope="col">What</th></tr></thead><tbody><tr><td><code>hypr/settings.conf</code></td><td>every user value: apps, keyboard, monitors, gaps, borders, fonts, bar, wallpaper folder…</td></tr><tr><td><code>~/.local/state/inkpaw/toggles.conf</code></td><td>what you changed in Settings — overrides settings.conf</td></tr><tr><td><code>~/.local/state/inkpaw/theme.conf</code></td><td>the last theme, restored at login</td></tr><tr><td><code>hypr/conf/keybinds/*.lua</code></td><td>keybindings (modifier = MOD)</td></tr><tr><td><code>hypr/conf/custom.lua</code></td><td>personal Hyprland tweaks, loaded last</td></tr></tbody></table></div><h3>The settings system</h3><p>The Settings window and the rofi menu are both generated from <code>hypr/settings.schema</code>, one line per option:</p><pre>Page/Group | KEY | type | choices | label | apply
+Bar/Layout | BAR_POSITION | choice | top,bottom | Position | bar</pre><p><code>apply</code> says what to reload: hypr, bar, theme, mode, scheme, skin, apps… Everything is also scriptable:</p><pre>hypr/scripts/menus/settings.sh set BAR_POSITION bottom
+hypr/scripts/menus/settings.sh unset BAR_POSITION</pre><h3>Hyprland modules</h3><p><code>hypr/hyprland.lua</code> only contains <code>require()</code> lines, one per concern in <code>hypr/conf/</code>. Comment one to switch a module off; press <kbd>SUPER</kbd>+<kbd>CTRL</kbd>+<kbd>R</kbd> to reload.</p><aside class="tip"><img src="../assets/img/peek-gribouille.png" alt="" width="56"><p>To expose any other settings.conf key in Settings, add one line to the schema.</p></aside>
+</section><section class="doc" id="theming" aria-labelledby="theming-t">
+  <span class="crumb">DOCS / THEMING</span>
+  <h2 id="theming-t" class="display">Theming</h2>
+  <p class="lead">Pick a wallpaper, and matugen turns it into a palette for every app — or pick one of nine static themes.</p>
+  <h3>Wallpapers and palettes</h3><pre>hyprtheme/theme.sh wallpaper ~/Pictures/x.jpg
+hyprtheme/theme.sh static nord
+hyprtheme/theme.sh mode dark</pre><div class="card table-box"><table><thead><tr><th scope="col">Keys</th><th scope="col">Action</th></tr></thead><tbody><tr><td><code>SUPER+CTRL+W</code></td><td>wallpaper selector</td></tr><tr><td><code>CTRL+ALT+T</code></td><td>static theme selector</td></tr><tr><td><code>SUPER+CTRL+T</code></td><td>light ↔ dark</td></tr></tbody></table></div><p><code>hyprtheme/generate-wallpapers.sh</code> draws 15 procedural wallpapers with ImageMagick. Your own images go in the same folder.</p><h3>Adding a themed app</h3><p>One file in <code>hyprtheme/templates/</code> whose first lines say where it goes: <code>@output: &lt;path&gt;</code>. Use <code>{{colors.primary.default.hex}}</code>, <code>{{accent.a1}}</code>, <code>{{ansi.red}}</code>, <code>{{ui.font}}</code>… and add a hook to live-reload the app.</p><h3>The “encre” style</h3><p>Settings → Appearance → Interface style. Fonts, apps and the top bar turn hand-drawn — parchment panels, ink outlines, brush titles and cats — while colors, wallpaper and windows stay yours.</p>
+</section><section class="doc" id="bar" aria-labelledby="bar-t">
+  <span class="crumb">DOCS / THE BAR</span>
+  <h2 id="bar-t" class="display">The bar</h2>
+  <p class="lead">Waybar is generated from a few settings: you never edit its JSON by hand.</p>
+  <div class="card table-box"><table><thead><tr><th scope="col">Setting</th><th scope="col">What it does</th></tr></thead><tbody><tr><td><code>BAR_POSITION</code></td><td>top / bottom</td></tr><tr><td><code>BAR_LAYOUT</code></td><td>center, split, left, right, custom</td></tr><tr><td><code>BAR_STYLE</code></td><td>capsules, floating, solid, minimal, hyde, encre</td></tr><tr><td><code>BAR_SESSION …</code></td><td>the ordered modules of each capsule</td></tr><tr><td><code>BAR_WORKSPACES_STYLE</code></td><td>dots or numbers</td></tr></tbody></table></div><h3>Under the hood</h3><p>Waybar switches workspace with the legacy <code>dispatch workspace N</code>, which a Lua config rejects: <code>waybar/ipc-proxy.py</code> rewrites it into Lua. Every click command is detached with <code>setsid</code>, so an app opened from the bar survives a theme change.</p><pre>hypr/scripts/waybar.sh start|restart|reload|toggle|build</pre>
+</section><section class="doc" id="apps" aria-labelledby="apps-t">
+  <span class="crumb">DOCS / APPS</span>
+  <h2 id="apps-t" class="display">Apps</h2>
+  <p class="lead">Spotlight, the quick panel, notifications, the AI assistant and the menus.</p>
+  <h3>Spotlight</h3><p><kbd>SUPER</kbd>+<kbd>SPACE</kbd>. One list with a section per kind: calculator, apps, actions, files, emoji, clipboard, web and maps, command. Prefixes search one section: <code>=</code> calc, <code>/</code> files, <code>.</code> emoji, <code>:</code> clipboard, <code>@</code> web, <code>&gt;</code> run.</p><h3>Quick panel</h3><p>Click an icon of the bar: Wi-Fi, Bluetooth, sound per app, brightness (DDC/CI for external screens, night light), battery and power mode, notifications history, calendar, media. It stays in memory, so it opens at once.</p><h3>AI assistant</h3><p><kbd>SUPER</kbd>+<kbd>I</kbd>. A window that docks beside your tiled windows, with conversations (<kbd>Ctrl</kbd>+<kbd>O</kbd>, <kbd>Ctrl</kbd>+<kbd>N</kbd>), streaming Markdown and Copy buttons. Claude by default; OpenAI, Ollama, OpenRouter or any compatible endpoint in Settings.</p><aside class="tip"><img src="../assets/img/peek-gribouille.png" alt="" width="56"><p>API keys are stored in <code>~/.local/state/inkpaw/secrets.conf</code> (mode 600), never in the repo.</p></aside>
+</section><section class="doc" id="keybindings" aria-labelledby="keybindings-t">
+  <span class="crumb">DOCS / KEYBINDINGS</span>
+  <h2 id="keybindings-t" class="display">Keybindings</h2>
+  <p class="lead">MOD is SUPER. The live, searchable list is SUPER+CTRL+K — generated from every bind’s description.</p>
+  <div class="card table-box"><table><thead><tr><th scope="col">Keys</th><th scope="col">Action</th></tr></thead><tbody><tr><td><code>SUPER+RETURN</code></td><td>terminal</td></tr><tr><td><code>SUPER+SPACE</code></td><td>Spotlight</td></tr><tr><td><code>SUPER+Q</code></td><td>close the window</td></tr><tr><td><code>SUPER+1…0</code></td><td>go to workspace 1–10 (AZERTY: the number row)</td></tr><tr><td><code>SUPER+CTRL+S</code></td><td>Settings</td></tr><tr><td><code>SUPER+I</code></td><td>AI assistant</td></tr><tr><td><code>SUPER+N</code></td><td>notifications</td></tr><tr><td><code>SUPER+CTRL+W / CTRL+ALT+T</code></td><td>wallpaper / theme selector</td></tr><tr><td><code>SUPER+CTRL+P</code></td><td>power menu</td></tr><tr><td><code>PRINT / SUPER+ALT+E</code></td><td>screenshot an area and annotate it</td></tr></tbody></table></div>
+</section><section class="doc" id="development" aria-labelledby="development-t">
+  <span class="crumb">DOCS / DEVELOPMENT</span>
+  <h2 id="development-t" class="display">Development</h2>
+  <p class="lead">One concern per file, every value in settings.conf, generated files never committed.</p>
+  <pre>./test.sh deps            # missing packages + the install command
+./test.sh verify          # every monitor profile, every file, every theme
+./test.sh nested          # the whole desktop in a nested window</pre><div class="card table-box"><table><thead><tr><th scope="col">To add…</th><th scope="col">Do</th></tr></thead><tbody><tr><td><code>a setting</code></td><td>a line in settings.conf + one in settings.schema</td></tr><tr><td><code>a themed app</code></td><td>a template in hyprtheme/templates/</td></tr><tr><td><code>a static theme</code></td><td>a JSON file in hyprtheme/static/</td></tr><tr><td><code>a keybind</code></td><td>a line with a description in hypr/conf/keybinds/</td></tr><tr><td><code>a monitor profile</code></td><td>a file in hypr/monitors/</td></tr></tbody></table></div><aside class="tip"><img src="../assets/img/peek-gribouille.png" alt="" width="56"><p><code>./test.sh verify</code> must pass before every commit — it runs in a throw-away copy, never in your config.</p></aside>
+</section>
+  </main>
+</div>
+<footer class="site-footer">
+  <img class="basket" src="../assets/img/basket.png" alt="" width="150">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <div class="row"><img src="../assets/img/inkpaw-mark-flat-256.png" alt="" width="64"><span>Inkpaw</span></div>
+      <p>A modular Hyprland desktop. Cats, logo and wallpapers are drawn by the code of the repo; fonts under the SIL Open Font License.</p>
+    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <div><strong>Project</strong><a href="install.html">Install</a><a href="screenshots.html">Screenshots</a><a href="https://github.com/Tataneeeeeeeeeee/Inkpaw">GitHub</a></div>
+      <div><strong>Docs</strong><a href="docs.html#configuration">Configuration</a><a href="docs.html#theming">Theming</a><a href="docs.html#bar">The bar</a></div>
+    </nav>
+  </div>
+  <div class="footer-bottom">Built on Hyprland, Waybar, matugen, Walker and SwayNotificationCenter.</div>
+</footer>
+</body>
+</html>

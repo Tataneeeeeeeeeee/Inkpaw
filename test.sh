@@ -273,7 +273,7 @@ cmd_verify() {
     else err "settings.schema: malformed line(s)"; fail=1; fi
 
     title "Python syntax"
-    for f in "$HERE"/spotlight/*.py "$HERE"/hyprtheme/lib/*.py "$HERE"/waybar/build.py "$HERE"/waybar/ipc-proxy.py "$HERE"/settings-app/*.py "$HERE"/quickpanel/*.py "$HERE"/aichat/*.py \
+    for f in "$HERE"/spotlight/*.py "$HERE"/hyprtheme/lib/*.py "$HERE"/waybar/build.py "$HERE"/waybar/ipc-proxy.py "$HERE"/site/build.py "$HERE"/settings-app/*.py "$HERE"/quickpanel/*.py "$HERE"/aichat/*.py \
              "$HERE"/deskpet/*.py "$HERE"/welcome/*.py "$HERE"/powermenu/*.py "$HERE"/keysheet/*.py "$HERE"/themepicker/*.py "$HERE"/wallpicker/*.py "$HERE"/pylib/*.py "$HERE"/hyprtheme/skins/*/cats/build.py; do
         if python3 -c 'import ast,sys; ast.parse(open(sys.argv[1]).read())' "$f" 2>/dev/null; then ok "${f#"$HERE"/}"
         else err "${f#"$HERE"/}"; fail=1; fi

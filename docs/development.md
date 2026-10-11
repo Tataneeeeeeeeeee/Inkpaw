@@ -47,7 +47,8 @@ login session links them into its config root (see
 ├── walker/  elephant/          # launcher config and backend menus
 ├── swaync/  swayosd/  wlogout/  rofi/  kitty/
 ├── session/                    # login session: start.sh, install.sh, uninstall.sh, sddm/encre/
-└── logo/                       # the logo (build.py → SVG + PNG)
+├── logo/                       # the logo (build.py → SVG + PNG)
+└── site/                       # the website: content/{en,fr}.json → build.py → en/ fr/
 ```
 
 ## Conventions
