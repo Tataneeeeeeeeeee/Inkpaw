@@ -73,7 +73,7 @@ command for what is missing.
 | Hyprland | `hyprland` `hyprlock` `hypridle` `hyprsunset` |
 | Desktop | `waybar` `rofi` `walker` `elephant` (+ `elephant-desktopapplications` `-files` `-calc` `-websearch` `-clipboard` `-runner` `-symbols` `-providerlist` `-menus`) `swaync` `swayosd` `wlogout` |
 | Theming | `matugen` `awww` (or `swww`) `jq` `imagemagick` |
-| System | `networkmanager` `bluez-utils` `blueman` `wireplumber` `pavucontrol` `brightnessctl` `playerctl` `libnotify` `dbus` |
+| System | `networkmanager` `bluez-utils` `blueman` `wireplumber` `pavucontrol` `brightnessctl` `playerctl` `libnotify` `dbus` `pacman-contrib` |
 | Screenshots | `hyprshot` `satty` `grim` `slurp` `wl-clipboard` |
 | Apps | `kitty` `python-gobject` `python-cairo` `gtk4` `libadwaita` `gtk4-layer-shell` |
 | Fonts | `ttf-jetbrains-mono-nerd` `ttf-cascadia-code-nerd` |

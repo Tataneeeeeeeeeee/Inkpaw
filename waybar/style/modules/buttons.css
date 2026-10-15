@@ -4,6 +4,12 @@
 #custom-power { color: @a4; }
 #custom-power:hover { color: @surface; background-color: @a4; }
 
+/* custom/updates — pending updates (hidden when up to date) */
+#custom-updates { color: @a5; font-weight: 600; }
+#custom-updates.many { color: @a4; }
+#custom-updates.none { color: alpha(@on_surface, 0.5); }
+#custom-updates:hover { color: @surface; background-color: @a5; }
+
 /* custom/ai — AI chat button */
 #custom-ai { color: @a2; font-size: 14px; }
 #custom-ai:hover { color: @surface; background-color: @a2; }

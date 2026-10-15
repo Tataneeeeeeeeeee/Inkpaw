@@ -24,6 +24,7 @@ sound	pulseaudio	Sound
 network	network	Network / Wi-Fi
 bluetooth	bluetooth	Bluetooth
 battery	battery	Battery
+updates	custom/updates	System updates (pending count, click to update)
 ai	custom/ai	AI assistant (chat panel)
 notifications	custom/notifications	Notifications
 settings	custom/settings	Settings button

@@ -118,7 +118,7 @@ REQUIRED=(
     "nmcli:networkmanager" "bluetoothctl:bluez-utils" "blueman-manager:blueman"
     "wpctl:wireplumber" "pavucontrol:pavucontrol" "brightnessctl:brightnessctl" "playerctl:playerctl"
     "hyprshot:hyprshot" "satty:satty" "grim:grim" "slurp:slurp" "wl-copy:wl-clipboard"
-    "notify-send:libnotify" "kitty:kitty" "dbus-run-session:dbus"
+    "notify-send:libnotify" "kitty:kitty" "dbus-run-session:dbus" "checkupdates:pacman-contrib"
 )
 # libraries of the GTK 4 apps (settings, menus, quick panel, AI chat…): checked with pacman -Q
 LIBS=(python-gobject python-cairo gtk4 libadwaita gtk4-layer-shell)

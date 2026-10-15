@@ -1,0 +1,12 @@
+// custom/updates — pending updates (repos + AUR + Flatpak), hidden when up to date;
+// click = update in a floating terminal, right click = check again
+{
+    "custom/updates": {
+        "return-type": "json",
+        "exec": "$XDG_CONFIG_HOME/hypr/scripts/updates.sh",
+        "interval": 1800,
+        "signal": 8,
+        "on-click": "$XDG_CONFIG_HOME/hypr/scripts/updates.sh run",
+        "on-click-right": "$XDG_CONFIG_HOME/hypr/scripts/updates.sh refresh"
+    }
+}

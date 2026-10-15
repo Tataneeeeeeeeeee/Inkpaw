@@ -47,6 +47,9 @@ Bar/Modules | BAR_WORKSPACES_COUNT | number | 3,4,5,6,8,10 | Workspaces always s
 Bar/Modules | BAR_CLOCK_FORMAT | text | %a %d %b   %H:%M;%H:%M;%H:%M:%S;%A %d %B · %H:%M;%d/%m  %H:%M | Clock format | bar
 Bar/Modules | BAR_SHOW_PERCENT | bool |  | Numbers next to icons | bar
 Bar/Modules | BAR_COLORED_ICONS | bool |  | Colored icons | bar
+Bar/Updates | UPDATES_INTERVAL | number | 15,30,60,120,360 | Minutes between two checks | bar
+Bar/Updates | UPDATES_SHOW_ZERO | bool |  | Show the button when the system is up to date | bar
+Bar/Updates | $SCRIPTS/updates.sh run | action |  | Update the system now | none
 Bar/Sizes | BAR_FONT_SIZE | number | 10,11,12,13,14 | Font size | bar
 Bar/Sizes | BAR_MODULE_PADDING | number | 6,8,10,13,16,20 | Width: space around each module | bar
 Bar/Sizes | BAR_HEIGHT | number | 0,30,34,38,42 | Height (0 = auto) | bar
@@ -138,6 +141,7 @@ Displays/Keyboard & mouse | MOUSE_SENSITIVITY | number | -0.5,-0.25,0,0.25,0.5 |
 System/General | LAUNCHER | choice | spotlight,walker | Search launcher (SUPER+SPACE) | none
 System/General | SETTINGS_UI | choice | app,rofi | Settings window or rofi menu | none
 System/Tools | $SCRIPTS/welcome.sh | action |  | Welcome window (first steps) | none
+System/Tools | $SCRIPTS/updates.sh run | action |  | Update the system | none
 System/Tools | $SCRIPTS/quickpanel.sh wifi | action |  | Wi-Fi | none
 System/Tools | $SCRIPTS/quickpanel.sh bluetooth | action |  | Bluetooth | none
 System/Tools | $SCRIPTS/quickpanel.sh sound | action |  | Sound | none

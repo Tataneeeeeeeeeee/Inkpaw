@@ -20,10 +20,11 @@ reloads. You never edit Waybar JSON by hand — use Settings → Bar or
 | `BAR_CLOCK_FORMAT` | strftime format |
 | `BAR_SHOW_PERCENT`, `BAR_COLORED_ICONS` | numbers next to icons; one accent per module or monochrome |
 | `BAR_HEIGHT` (0 = auto), `BAR_MARGIN`, `BAR_FONT_SIZE`, `BAR_MODULE_PADDING`, `BAR_RADIUS`, `BAR_OPACITY` | sizes |
+| `UPDATES_INTERVAL`, `UPDATES_SHOW_ZERO` | minutes between two update checks; keep the updates button when the system is up to date |
 
 Modules (`waybar/catalog.tsv`): launcher, workspaces, taskbar, window, clock,
 media, extras (drawer), tray, caffeine, wallpaper, brightness, keyboard, cpu,
-memory, sound, network, bluetooth, battery, notifications, ai, settings, power.
+memory, sound, network, bluetooth, battery, updates, notifications, ai, settings, power.
 
 ## Clicks
 
@@ -41,6 +42,7 @@ memory, sound, network, bluetooth, battery, notifications, ai, settings, power.
 | sound | sound panel | pavucontrol | middle = mute, scroll = volume |
 | network | Wi-Fi panel | nmtui | middle = rofi menu |
 | bluetooth | Bluetooth panel | Blueman | middle = rofi menu |
+| updates | update in a floating terminal | check again | |
 | notifications | notifications panel | do not disturb | middle = swaync center |
 | ai | AI assistant | its settings page | |
 | settings | Settings | keybindings sheet | middle = rofi settings menu |
@@ -55,6 +57,23 @@ hypr/scripts/waybar.sh start|restart|reload|toggle|build
 `SUPER+CTRL+B` hides / shows the bar, `SUPER+SHIFT+B` restarts it. Always
 start it through `waybar.sh`: it exports `XDG_CONFIG_HOME` for the module
 commands and starts the IPC relay below.
+
+## System updates
+
+The `updates` module shows how many packages can be updated — official
+repositories (`checkupdates`, from `pacman-contrib`: it works on a copy of the
+database, so the system's own is never touched), the AUR (`yay` / `paru`) and
+Flatpak apps. It is hidden when everything is up to date (`UPDATES_SHOW_ZERO`)
+and turns to the warning color from 50 updates; the tooltip lists them.
+
+A click opens a floating terminal running `yay -Syu` (or `paru`, or
+`sudo pacman -Syu`) then `flatpak update`; the count refreshes when it ends.
+Same thing from Settings → System → Update the system, or:
+
+```bash
+hypr/scripts/updates.sh run       # the update terminal
+hypr/scripts/updates.sh refresh   # check again now
+```
 
 ## Under the hood
 

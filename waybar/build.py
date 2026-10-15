@@ -107,6 +107,7 @@ def apply_options(defs):
         ws["format"] = "{name}"
     clock = defs.setdefault("clock", {})
     clock["format"] = "{:L" + get("BAR_CLOCK_FORMAT", "%a %d %b   %H:%M") + "}"
+    defs.setdefault("custom/updates", {})["interval"] = max(1, int(num("UPDATES_INTERVAL", 30))) * 60
     if not pct:
         defs.get("pulseaudio", {}).update({"format": "{icon}", "format-bluetooth": "󰂰"})
         defs.get("battery", {}).update({"format": "{icon}", "format-charging": "󰂄", "format-plugged": "󰚥"})
@@ -154,7 +155,7 @@ def build_config():
         "session": words("BAR_SESSION", "launcher workspaces taskbar"),
         "time": words("BAR_TIME", "clock"),
         "status": words("BAR_STATUS", "extras media sound network bluetooth battery"),
-        "system": words("BAR_SYSTEM", "ai notifications settings power"),
+        "system": words("BAR_SYSTEM", "updates ai notifications settings power"),
     }
     for cap, names in contents.items():
         mods = ids(names, cat, f"BAR_{cap.upper()}")
@@ -324,7 +325,7 @@ def build_style(conf=None):
         lines += ["/* BAR_COLORED_ICONS=false: monochrome */",
                   "#pulseaudio, #network, #bluetooth, #battery, #cpu, #memory, #mpris, #language, "
                   "#custom-settings, #custom-power, #custom-notifications, #custom-wallpaper, #backlight, "
-                  "#idle_inhibitor, #custom-launcher, #custom-chevron { color: @on_surface; }"]
+                  "#idle_inhibitor, #custom-launcher, #custom-chevron, #custom-updates { color: @on_surface; }"]
     if get("BAR_WORKSPACES_STYLE", "dots") == "numbers":
         lines += ["/* numbered workspaces */",
                   "#workspaces button, #workspaces button.empty { min-width: 20px; min-height: 0; margin: 4px 1px;"

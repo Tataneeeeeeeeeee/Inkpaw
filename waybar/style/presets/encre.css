@@ -87,7 +87,7 @@ window#waybar #extras, window#waybar #extras:hover {
 /* Every module in ink, even those the style/modules/ files tint with accents */
 #clock, #pulseaudio, #network, #bluetooth, #battery, #cpu, #memory, #mpris, #language,
 #custom-settings, #custom-ai, #custom-notifications, #custom-wallpaper, #backlight,
-#idle_inhibitor, #custom-launcher, #custom-chevron, #custom-power, #tray {
+#idle_inhibitor, #custom-launcher, #custom-chevron, #custom-power, #tray, #custom-updates {
     color: @encre_ink;
 }
 
@@ -95,12 +95,12 @@ window#waybar #extras, window#waybar #extras:hover {
 #pulseaudio.muted,
 #network.disconnected, #network.disabled,
 #bluetooth.disabled, #bluetooth.off,
-#mpris.paused,
+#mpris.paused, #custom-updates.none,
 #custom-notifications.dnd-none, #custom-notifications.dnd-notification {
     color: alpha(@encre_ink, 0.45);
 }
-/* unread notifications: accent text (dark ochre, readable on paper) */
-#custom-notifications.notification { color: @primary; }
+/* unread notifications / many updates: accent text (dark ochre, readable on paper) */
+#custom-notifications.notification, #custom-updates.many { color: @primary; }
 
 /* --- sizes: the clock a bit larger (no chip of its own), the icon-only buttons
    larger than the text so the ink glyphs read like the mockup's drawn icons */
